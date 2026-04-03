@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower – Where London's Best Founders Launch, Grow, and Stay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23e61d2b' width='32' height='32' rx='4'/><text x='16' y='24' text-anchor='middle' font-size='22' font-weight='bold' fill='white' font-family='serif'>T</text></svg>">
+</head>
+<body>
+
+  <!-- Password Gate -->
+  <div id="gate" class="gate">
+    <div class="gate-bg">
+      <svg class="gate-star" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="#e61d2b"/></svg>
+      <svg class="gate-star gate-star-2" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="#ca0024"/></svg>
+      <svg class="gate-star gate-star-3" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="#e61d2b" opacity="0.3"/></svg>
+    </div>
+    <div class="gate-content">
+      <div class="gate-logo">Tower</div>
+      <form id="gate-form" class="gate-form">
+        <input type="password" id="gate-password" class="gate-input" placeholder="Password" autocomplete="off" autofocus>
+        <button type="submit" class="gate-btn">Enter</button>
+      </form>
+      <p id="gate-error" class="gate-error"></p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="content" class="content hidden">
+
+    <svg style="display:none">
+      <defs>
+        <symbol id="star-pattern" viewBox="0 0 925 1108.31" preserveAspectRatio="xMidYMid meet">
+          <path d="M277.508 923.309C277.692 974.332 319.036 1015.64 370.009 1015.64C318.921 1015.64 277.508 1057.13 277.508 1108.31C277.323 1057.29 235.98 1015.98 185.007 1015.98C236.093 1015.98 277.508 974.489 277.508 923.309ZM462.5 923.309C462.684 974.332 504.028 1015.64 555.001 1015.64C503.913 1015.64 462.5 1057.13 462.5 1108.31C462.315 1057.29 420.973 1015.98 370 1015.98C421.086 1015.98 462.5 974.489 462.5 923.309ZM92.501 738.308C92.6853 789.331 134.028 830.637 185.001 830.637C133.914 830.637 92.501 872.128 92.501 923.309C92.316 872.285 50.9729 830.979 0 830.979C51.0865 830.979 92.5008 789.488 92.501 738.308ZM462.5 738.308C462.684 789.331 504.028 830.637 555.001 830.637C503.913 830.637 462.5 872.128 462.5 923.309C462.315 872.285 420.973 830.98 370 830.979C421.086 830.979 462.5 789.488 462.5 738.308ZM647.508 738.308C647.692 789.331 689.035 830.637 740.008 830.637C688.92 830.637 647.508 872.128 647.508 923.309C647.323 872.285 605.98 830.98 555.007 830.979C606.093 830.979 647.508 789.488 647.508 738.308ZM832.5 738.308C832.684 789.331 874.027 830.637 925 830.637C873.913 830.637 832.5 872.128 832.5 923.309C832.315 872.285 790.972 830.979 739.999 830.979C791.086 830.979 832.5 789.488 832.5 738.308ZM92.501 183.304C92.6851 234.327 134.028 275.633 185.001 275.633C133.914 275.633 92.501 317.125 92.501 368.306C92.316 317.282 50.9729 275.976 0 275.976C51.0866 275.976 92.501 234.485 92.501 183.304ZM277.508 0C277.692 51.0238 319.036 92.3291 370.009 92.3291C319.261 92.3291 278.059 133.27 277.514 183.981C278.059 234.693 319.262 275.633 370.009 275.633C318.921 275.633 277.508 317.125 277.508 368.306C277.323 317.282 235.98 275.976 185.007 275.976C235.754 275.976 276.956 235.035 277.501 184.323C276.954 133.612 235.754 92.6719 185.007 92.6719C236.093 92.6719 277.508 51.1808 277.508 0ZM462.5 183.303C462.684 234.327 504.028 275.632 555.001 275.632C503.914 275.632 462.5 317.123 462.5 368.304C462.315 317.28 420.973 275.975 370 275.975C421.086 275.974 462.5 234.483 462.5 183.303ZM832.5 183.303C832.684 234.326 874.027 275.632 925 275.632C873.913 275.632 832.5 317.123 832.5 368.304C832.315 317.28 790.972 275.975 739.999 275.975C791.086 275.975 832.5 234.484 832.5 183.303ZM647.508 0C647.692 51.0237 689.035 92.329 740.008 92.3291C688.92 92.3292 647.508 133.82 647.508 185.001C647.323 133.977 605.98 92.6719 555.007 92.6719C606.093 92.6718 647.508 51.1808 647.508 0Z" fill="currentColor"/>
+        </symbol>
+      </defs>
+    </svg>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-logo">Tower</div>
+      <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="nav-menu">
+        <a href="#life">Community</a>
+        <a href="#space">The Space</a>
+        <a href="#join">Join</a>
+        <a href="#funds">For Funds</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <section id="hero" class="section section-hero">
+      <div class="stars-bg">
+        <svg class="stars-pattern"><use href="#star-pattern"/></svg>
+        <svg class="stars-pattern stars-right"><use href="#star-pattern"/></svg>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">Tower</h1>
+        <div class="hero-tagline">
+          <p class="hero-tagline-sub">Where outlier founders launch, grow, and stay</p>
+          <p class="hero-tagline-location">Startup hub &middot; Holborn, London</p>
+          <a href="#join" class="hero-cta">See how to join</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="stat-number">700+</span>
+            <span class="stat-label">members</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">$500M+</span>
+            <span class="stat-label">raised collectively</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">46%</span>
+            <span class="stat-label">Global Talent Visa</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Community Life -->
+    <section id="life" class="section section-life section-cream">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-accent"></div>
+          <h2 class="section-title reveal-left">the community</h2>
+        </div>
+        <div class="life-logos reveal">
+          <div class="logo-row">
+            <span class="logo-row-label">founders from</span>
+            <div class="logo-row-images logo-row-images-founders">
+              <div class="logo-cell"><img src="assets/meta-logo.png" alt="Meta" class="community-logo community-logo-meta" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-8.png" alt="Snapchat" class="community-logo community-logo-snap" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-9.png" alt="Amazon" class="community-logo community-logo-amazon" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-6.png" alt="Google" class="community-logo community-logo-google" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-10.png" alt="Revolut" class="community-logo community-logo-revolut" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-11.png" alt="Wise" class="community-logo community-logo-wise" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-12.png" alt="Spotify" class="community-logo community-logo-spotify" loading="lazy"></div>
+            </div>
+          </div>
+          <div class="logo-row">
+            <span class="logo-row-label">startups backed by</span>
+            <div class="logo-row-images logo-row-images-backed">
+              <div class="logo-cell"><img src="assets/logo-1.png" alt="Sequoia" class="community-logo community-logo-sequoia" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-2.png" alt="General Catalyst" class="community-logo community-logo-gc" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-3.png" alt="Andreessen Horowitz" class="community-logo community-logo-a16z" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-4.png" alt="Y Combinator" class="community-logo community-logo-yc" loading="lazy"></div>
+              <div class="logo-cell"><img src="assets/logo-5.png" alt="Accel" class="community-logo community-logo-accel" loading="lazy"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel" id="life-carousel">
+          <div class="carousel-slide">
+            <img src="assets/events-1.jpg" alt="Founder talks" loading="lazy">
+            <div class="carousel-caption">
+              <h3>Founder Talks</h3>
+              <p>Weekly talks from founders, operators, and investors. Real stories, hard lessons, and actionable advice.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/events-4.jpg" alt="Demo Day" loading="lazy">
+            <div class="carousel-caption">
+              <h3>Demo Days</h3>
+              <p>Tower Program graduates pitch to London's top investors. The room where deals happen.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/events-2.jpg" alt="Tower party" loading="lazy">
+            <div class="carousel-caption">
+              <h3>Socials & Parties</h3>
+              <p>Rooftop drinks, cinema nights, karaoke, and BBQs. The best ideas come when you stop trying.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots" id="carousel-dots"></div>
+      </div>
+      <div class="container">
+        <div class="testimonials">
+          <blockquote class="testimonial reveal">
+            <p>"I moved to London knowing nobody. Within a month at Tower, I had a co-founder, three angel investors, and friends I'll have for life."</p>
+            <cite>— Tower resident, Series A founder</cite>
+          </blockquote>
+          <blockquote class="testimonial reveal">
+            <p>"Every meeting I need is one floor away. My lawyer, my accountant, three of my investors — they're all in the building."</p>
+            <cite>— Tower resident, fintech founder</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: The Space -->
+    <section id="space" class="section section-space">
+      <div class="container">
+        <div class="section-header section-header-dark">
+          <div class="section-header-accent"></div>
+          <h2 class="section-title reveal-left">the space</h2>
+        </div>
+        <div class="space-layout">
+          <div class="space-photo reveal">
+            <img src="assets/building-new-branding.png" alt="Tower at 31 Great Queen Street" loading="lazy">
+          </div>
+          <div class="space-details reveal">
+            <p class="space-desc">A grand neoclassical building with high ceilings, ornate columns, herringbone floors, and a dramatic reception hall – blending historic London character with modern workspace design</p>
+            <div class="space-grid">
+              <div class="space-item">
+                <span class="space-label">location</span>
+                <p>Holborn (3 mins walk)<br>Covent Garden (5 mins walk)<br>Temple (10 mins walk)</p>
+              </div>
+              <div class="space-item">
+                <span class="space-label">address</span>
+                <p><a href="https://maps.app.goo.gl/coventgarden31gqs" target="_blank" rel="noopener">31 Great Queen Street, London WC2</a></p>
+              </div>
+              <div class="space-item">
+                <span class="space-label">the floors</span>
+                <p>Founders' Hall · Creative Studio · Playing Room · Fireside Lounge · Rooftop Terrace</p>
+              </div>
+              <div class="space-item">
+                <span class="space-label">desks</span>
+                <p>120 desks total<br>Program: free (fund-sponsored)<br>Residents: from &pound;850/mo per desk</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="operations reveal">
+          <div class="ops-grid">
+            <div class="ops-item">
+              <span class="ops-label">private offices</span>
+              <p>Dedicated lockable offices for teams of 4–30. Your own space, your own branding.</p>
+            </div>
+            <div class="ops-item">
+              <span class="ops-label">meeting rooms</span>
+              <p>6 bookable rooms included in your membership. Soundproofed. Video-equipped.</p>
+            </div>
+            <div class="ops-item">
+              <span class="ops-label">terms</span>
+              <p>6-month minimum. Scale up or down with 30 days notice. No hidden fees.</p>
+            </div>
+            <div class="ops-item">
+              <span class="ops-label">24/7 access</span>
+              <p>Keycard entry around the clock. Secure, CCTV-monitored, staffed during business hours.</p>
+            </div>
+            <div class="ops-item">
+              <span class="ops-label">connectivity</span>
+              <p>1Gbps symmetric fibre. Redundant connection. Enterprise-grade WiFi throughout.</p>
+            </div>
+            <div class="ops-item">
+              <span class="ops-label">included</span>
+              <p>Kitchen, coffee bar, bike storage, showers, printing, mail handling, rooftop terrace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Join -->
+    <section id="join" class="section section-join">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header-accent"></div>
+          <h2 class="section-title reveal-left">build Tower with us</h2>
+        </div>
+        <div class="join-photos-strip">
+          <img src="assets/31 Great Queen Street - External.jpg" alt="Tower exterior" loading="lazy">
+          <img src="assets/31 Great Queen Street - Reception.jpg" alt="Reception" loading="lazy">
+          <img src="assets/31 Great Queen Street - 1st Floor.jpg" alt="First floor" loading="lazy">
+          <img src="assets/31 Great Queen Street - Terrace.jpg" alt="Terrace" loading="lazy">
+        </div>
+        <div class="join-grid">
+          <div class="join-card reveal-scale">
+            <h3>Residents</h3>
+            <p class="card-highlight">from &pound;850/mo per desk · private offices</p>
+            <ul>
+              <li>Private lockable offices for teams of 4–30</li>
+              <li>$10m+ ARR or raised from Tier 1 VCs</li>
+              <li>All-inclusive: meeting rooms, amenities, events</li>
+              <li>6-month minimum, scale with 30 days notice</li>
+            </ul>
+          </div>
+          <div class="join-card reveal-scale">
+            <h3>Tower Program</h3>
+            <p class="card-highlight">3 months free, sponsored by our fund partners</p>
+            <ul>
+              <li>Selected founders get 3 months of free desk space</li>
+              <li>Backed by partner funds who sponsor the cohort</li>
+              <li>Ends with a Demo Day in front of London's top investors</li>
+              <li>Show traction – graduate to a permanent Tower office</li>
+            </ul>
+          </div>
+          <div class="cta-block reveal">
+            <a href="mailto:hello@tower.community?subject=Join Tower as a Startup" class="cta-button">Join as a Startup</a>
+            <a href="mailto:hello@tower.community?subject=Tower Program Application" class="cta-button cta-button-secondary">Apply for Tower Program</a>
+          </div>
+        </div>
+        <div class="curation reveal">
+          <p><strong>Curated admission.</strong> Every company reviewed by the Tower Council. We reject more than we accept.</p>
+        </div>
+        <div class="committed reveal">
+          <h3>confirmed residents</h3>
+            <div class="committed-list">
+              <div class="committed-company">
+                <div class="company-logo-row">
+                  <img src="assets/dwelly-logo.png" alt="Dwelly logo" class="company-logo company-logo-dwelly" loading="lazy">
+                </div>
+                <div class="company-meta-block">
+                  <span class="company-meta-line">AI-native property management for modern residential portfolios</span>
+                </div>
+                <div class="company-funding-block">
+                  <span class="company-funding-label">Backed by</span>
+                  <span class="company-funding-investors">General Catalyst, Trinity Capital</span>
+                </div>
+              </div>
+              <div class="committed-company committed-company-inline">
+                <div class="company-logo-row">
+                  <img src="assets/unreal-logo.png" alt="Unreal Labs logo" class="company-logo company-logo-unreal" loading="lazy">
+                  <span class="company-name">Unreal Labs</span>
+                </div>
+                <div class="company-meta-block">
+                  <span class="company-meta-line">AI creative generation for performance advertising at scale</span>
+                </div>
+                <div class="company-funding-block">
+                  <span class="company-funding-label">Backed by</span>
+                  <span class="company-funding-investors">Sequoia, First Round</span>
+                </div>
+              </div>
+              <div class="committed-company">
+                <div class="company-logo-row">
+                  <img src="assets/zerion-logotype.png" alt="Zerion logo" class="company-logo company-logo-zerion" loading="lazy">
+                </div>
+              <div class="company-meta-block">
+                <span class="company-meta-line">Crypto wallet and infrastructure for onchain portfolio data</span>
+              </div>
+                <div class="company-funding-block">
+                  <span class="company-funding-label">Backed by</span>
+                  <span class="company-funding-investors">Placeholder, Lightspeed</span>
+                </div>
+              </div>
+            </div>
+          <p class="committed-total">45 desks confirmed · 120 total capacity</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: For Funds -->
+    <section id="funds" class="section section-funds">
+      <div class="container">
+        <div class="section-header section-header-dark">
+          <div class="section-header-accent"></div>
+          <h2 class="section-title reveal-left">for funds & VCs</h2>
+        </div>
+        <p class="funds-subtitle reveal">Back London's best founders. Meet them early. Invest first.</p>
+        <div class="funds-grid">
+          <div class="fund-card fund-card-steps reveal-scale">
+            <h3>how it works</h3>
+            <ul class="fund-steps">
+              <li>
+                <span class="fund-step-number">01</span>
+                <span class="fund-step-copy">Sponsor a Tower cohort for 3 months</span>
+              </li>
+              <li>
+                <span class="fund-step-number">02</span>
+                <span class="fund-step-copy">Spend time with founders through office hours, dinners, and Demo Day</span>
+              </li>
+              <li>
+                <span class="fund-step-number">03</span>
+                <span class="fund-step-copy">Get a 5-day first look at the top companies</span>
+              </li>
+            </ul>
+          </div>
+          <div class="fund-card reveal-scale">
+            <h3>partnership tiers</h3>
+            <div class="tier">
+              <span class="tier-name">Anchor Partner</span>
+              <span class="tier-desc">5 seats. Named room. Permanent desk. All events. Front-row Demo Day. First-look window.</span>
+            </div>
+            <div class="tier">
+              <span class="tier-name">Community Partner</span>
+              <span class="tier-desc">2 seats. Monthly office hours. Co-hosted events. Demo Day access. Deal flow updates.</span>
+            </div>
+            <div class="tier">
+              <span class="tier-name">Network Friend</span>
+              <span class="tier-desc">Event invites and community Slack. For angels and scout funds.</span>
+            </div>
+          </div>
+        </div>
+        <div class="cta-block reveal">
+          <a href="mailto:hello@tower.community?subject=Fund Partnership Inquiry" class="cta-button">Become a Fund Partner</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Contact + Footer -->
+    <section id="contact" class="section section-contact">
+      <div class="stars-bg">
+        <svg class="stars-pattern stars-wide"><use href="#star-pattern"/></svg>
+      </div>
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-left reveal">
+            <div class="section-header">
+              <div class="section-header-accent"></div>
+              <h2 class="section-title">reach out</h2>
+            </div>
+            <div class="contact-info">
+              <p class="who-we-are">Tower is built by founders, for founders. Our council includes operators who've built and exited companies across fintech, crypto, and AI.</p>
+            </div>
+            <div class="contact-info">
+              <h3>Email us</h3>
+              <a href="mailto:hello@tower.community" class="contact-link">hello@tower.community</a>
+            </div>
+            <div class="contact-info">
+              <h3>Follow us</h3>
+              <div class="contact-buttons">
+                <a href="https://lu.ma/tower" target="_blank" rel="noopener" class="contact-btn contact-btn-events">
+                  <img src="assets/luma.png" alt="" class="contact-btn-icon" loading="lazy" aria-hidden="true">
+                  <span>Events</span>
+                </a>
+                <a href="https://buymeacoffee.com/tower.london" target="_blank" rel="noopener" class="contact-btn contact-btn-outline">Become a Tower Builder</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-right reveal">
+            <img src="assets/collage.jpg" alt="Tower community" loading="lazy">
+          </div>
+        </div>
+        <div class="contact-footer">
+          <h2 class="footer-title reveal">Tower</h2>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
