@@ -1,0 +1,11 @@
+{
+  "name": "tower-visual-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "screenshot": "node tools/screenshot.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0"
+  }
+}
