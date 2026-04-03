@@ -6,6 +6,7 @@ Website for [tower.community](https://tower.community) – a startup hub in Holb
 
 ```
 /                        → Public landing page
+/tower-identity/         → Design system & component showcase
 /tower-2-confidential/   → Password-protected detailed site
 ```
 
