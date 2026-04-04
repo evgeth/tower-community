@@ -1,4 +1,4 @@
-const PASSWORD = 'JoinThePower<3';
+const PASSWORD = 'JoinThePower';
 
 // Password gate
 const gate = document.getElementById('gate');
