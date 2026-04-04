@@ -3,51 +3,831 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tower – Brand</title>
+  <title>Tower – Identity & Components</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="identity.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23e61d2b' width='32' height='32' rx='4'/><text x='16' y='24' text-anchor='middle' font-size='22' font-weight='bold' fill='white' font-family='serif'>T</text></svg>">
-  <style>
-    body {
-      color: #fff;
-      background: var(--dark);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .container {
-      text-align: center;
-      padding: 2rem;
-      max-width: 640px;
-    }
-
-    .logo {
-      font-family: var(--font-display);
-      font-size: clamp(4rem, 12vw, 7rem);
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      color: var(--red);
-      margin-bottom: 1.5rem;
-    }
-
-    .subtitle {
-      font-size: 0.85rem;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.4);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-  </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="logo">Tower</h1>
-    <p class="subtitle">Brand</p>
-  </div>
+
+  <!-- Sidebar nav -->
+  <nav class="id-nav">
+    <div class="id-nav-title">Tower<br><span>Identity</span></div>
+    <ul>
+      <li><a href="#colors">Colors</a></li>
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#cards">Cards</a></li>
+      <li><a href="#stats">Stats</a></li>
+      <li><a href="#inputs">Inputs</a></li>
+      <li><a href="#carousel">Carousel</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#logo-grid">Logo Grid</a></li>
+      <li><a href="#operations">Operations Grid</a></li>
+      <li><a href="#steps">Steps</a></li>
+      <li><a href="#tiers">Tiers</a></li>
+      <li><a href="#photo-strip">Photo Strip</a></li>
+      <li><a href="#split-layout">Split Layout</a></li>
+      <li><a href="#section-headers">Section Headers</a></li>
+      <li><a href="#star-pattern">Star Pattern</a></li>
+      <li><a href="#nav-bar">Navigation</a></li>
+      <li><a href="#hero">Hero</a></li>
+      <li><a href="#animations">Animations</a></li>
+    </ul>
+  </nav>
+
+  <main class="id-main">
+
+    <!-- Header -->
+    <header class="id-header">
+      <h1>Tower Identity</h1>
+      <p>Reusable design components for tower.community pages. Each component below can be dropped into any Tower page using the shared CSS classes.</p>
+    </header>
+
+    <!-- ==========================================
+         COLORS
+         ========================================== -->
+    <section id="colors" class="id-section">
+      <h2 class="id-section-title">Colors</h2>
+      <p class="id-section-desc">Brand palette defined as CSS custom properties in <code>:root</code>.</p>
+
+      <div class="swatch-grid">
+        <div class="swatch">
+          <div class="swatch-block" style="background: var(--red);"></div>
+          <span class="swatch-name">Red</span>
+          <code class="swatch-value">#e61d2b</code>
+          <code class="swatch-var">--red</code>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background: var(--red-dark);"></div>
+          <span class="swatch-name">Red Dark</span>
+          <code class="swatch-value">#ca0024</code>
+          <code class="swatch-var">--red-dark</code>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background: var(--red-deep);"></div>
+          <span class="swatch-name">Red Deep</span>
+          <code class="swatch-value">#D2000F</code>
+          <code class="swatch-var">--red-deep</code>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background: var(--cream);"></div>
+          <span class="swatch-name">Cream</span>
+          <code class="swatch-value">#FFEAC3</code>
+          <code class="swatch-var">--cream</code>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background: var(--dark);"></div>
+          <span class="swatch-name">Dark</span>
+          <code class="swatch-value">#141414</code>
+          <code class="swatch-var">--dark</code>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background: var(--off-white);"></div>
+          <span class="swatch-name">Off White</span>
+          <code class="swatch-value">#efefef</code>
+          <code class="swatch-var">--off-white</code>
+        </div>
+        <div class="swatch">
+          <div class="swatch-block" style="background: var(--white); border: 1px solid #ddd;"></div>
+          <span class="swatch-name">White</span>
+          <code class="swatch-value">#ffffff</code>
+          <code class="swatch-var">--white</code>
+        </div>
+      </div>
+
+      <h3 class="id-subsection">Surface Combinations</h3>
+      <div class="surface-grid">
+        <div class="surface-demo" style="background: var(--red); color: var(--white);">
+          <span class="surface-label">Red surface</span>
+          <span class="surface-body">White text, cream accents</span>
+        </div>
+        <div class="surface-demo" style="background: var(--dark); color: var(--off-white);">
+          <span class="surface-label">Dark surface</span>
+          <span class="surface-body">Off-white text, cream accents</span>
+        </div>
+        <div class="surface-demo" style="background: var(--cream); color: var(--dark);">
+          <span class="surface-label">Cream surface</span>
+          <span class="surface-body">Dark text, red-dark accents</span>
+        </div>
+        <div class="surface-demo" style="background: var(--off-white); color: var(--dark);">
+          <span class="surface-label">Off-white surface</span>
+          <span class="surface-body">Dark text, cream borders</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TYPOGRAPHY
+         ========================================== -->
+    <section id="typography" class="id-section">
+      <h2 class="id-section-title">Typography</h2>
+      <p class="id-section-desc">Two font families: <strong>Perandory</strong> (display/serif) and <strong>Unbounded</strong> (body/sans-serif).</p>
+
+      <div class="type-specimen" style="background: var(--red);">
+        <span class="type-label">Display – Hero Title</span>
+        <span class="type-meta">Perandory 400 · clamp(5rem, 18vw, 18rem)</span>
+        <div class="type-sample" style="font-family: var(--font-display); font-size: clamp(3rem, 10vw, 8rem); font-weight: 400; color: var(--white); line-height: 0.85; text-transform: uppercase; letter-spacing: 0.02em;">Tower</div>
+      </div>
+
+      <div class="type-specimen">
+        <span class="type-label">Display – Section Title</span>
+        <span class="type-meta">Perandory 400 · clamp(2.5rem, 6vw, 7rem)</span>
+        <div class="type-sample" style="font-family: var(--font-display); font-size: clamp(2rem, 5vw, 4.5rem); font-weight: 400; color: var(--dark); line-height: 1.1;">the community</div>
+      </div>
+
+      <div class="type-specimen">
+        <span class="type-label">Display – Card Title</span>
+        <span class="type-meta">Perandory 400 · clamp(1.4rem, 2vw, 2rem)</span>
+        <div class="type-sample" style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 400; color: var(--dark); line-height: 1.2;">Permanent Desk</div>
+      </div>
+
+      <div class="type-specimen">
+        <span class="type-label">Display – Stat Number</span>
+        <span class="type-meta">Perandory 400 · clamp(2rem, 4vw, 3.5rem)</span>
+        <div class="type-sample" style="font-family: var(--font-display); font-size: 3rem; font-weight: 400; color: var(--red);">$500M+</div>
+      </div>
+
+      <div class="type-specimen">
+        <span class="type-label">Body – Tagline</span>
+        <span class="type-meta">Unbounded 700 · clamp(1.35rem, 2.2vw, 2.25rem)</span>
+        <div class="type-sample" style="font-size: 1.8rem; font-weight: 700; color: var(--dark); line-height: 1.08;">Where outlier founders launch, grow, and stay</div>
+      </div>
+
+      <div class="type-specimen">
+        <span class="type-label">Body – Paragraph</span>
+        <span class="type-meta">Unbounded 300 · 0.95rem</span>
+        <div class="type-sample" style="font-size: 0.95rem; font-weight: 300; color: var(--dark); line-height: 1.6; max-width: 500px;">Tower is a curated community of 700+ ambitious founders, operators, and creatives building the future from Holborn, London.</div>
+      </div>
+
+      <div class="type-specimen">
+        <span class="type-label">UI – Label / Uppercase</span>
+        <span class="type-meta">Unbounded 700 · 0.75rem · tracking 0.12em</span>
+        <div class="type-sample" style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--dark); opacity: 0.5;">founders from</div>
+      </div>
+
+      <div class="type-specimen">
+        <span class="type-label">UI – Nav Link</span>
+        <span class="type-meta">Unbounded 400 · 0.8rem · tracking 0.05em</span>
+        <div class="type-sample" style="font-size: 0.8rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; color: var(--dark);">Community &nbsp;&nbsp; The Space &nbsp;&nbsp; Join &nbsp;&nbsp; For Funds &nbsp;&nbsp; Contact</div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         BUTTONS
+         ========================================== -->
+    <section id="buttons" class="id-section">
+      <h2 class="id-section-title">Buttons</h2>
+      <p class="id-section-desc">Four button variants across light and dark surfaces.</p>
+
+      <h3 class="id-subsection">On light surface</h3>
+      <div class="button-row">
+        <a href="#" class="cta-button">Primary</a>
+        <a href="#" class="cta-button-secondary">Secondary</a>
+      </div>
+
+      <h3 class="id-subsection">On red surface</h3>
+      <div class="button-row" style="background: var(--red); padding: 2rem; border-radius: 8px;">
+        <a href="#" class="cta-button">Primary on Red</a>
+        <a href="#" class="cta-button-outline">Outline on Red</a>
+      </div>
+
+      <h3 class="id-subsection">On dark surface</h3>
+      <div class="button-row" style="background: var(--dark); padding: 2rem; border-radius: 8px;">
+        <a href="#" class="cta-button">Primary on Dark</a>
+        <a href="#" class="cta-button-outline">Outline on Dark</a>
+      </div>
+
+      <h3 class="id-subsection">Hero CTA (outline, cream border)</h3>
+      <div class="button-row" style="background: var(--red); padding: 2rem; border-radius: 8px;">
+        <a href="#" class="hero-cta" style="animation: none;">See how to join</a>
+      </div>
+
+      <h3 class="id-subsection">Contact Buttons</h3>
+      <div class="button-row" style="background: var(--red); padding: 2rem; border-radius: 8px; gap: 1rem;">
+        <a href="#" class="contact-btn">Solid Button</a>
+        <a href="#" class="contact-btn contact-btn-outline">Outline Button</a>
+      </div>
+
+      <h3 class="id-subsection">Gate Button (dark, input-adjacent)</h3>
+      <div class="button-row" style="background: var(--red); padding: 2rem; border-radius: 8px;">
+        <div style="display: flex; gap: 0; max-width: 400px; width: 100%;">
+          <input type="text" class="gate-input" placeholder="Email address" style="flex: 1;">
+          <button class="gate-btn">Submit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CARDS
+         ========================================== -->
+    <section id="cards" class="id-section">
+      <h2 class="id-section-title">Cards</h2>
+      <p class="id-section-desc">Card components with cream left border accent and hover elevation.</p>
+
+      <h3 class="id-subsection">Join Card (membership tier)</h3>
+      <div class="demo-grid-2">
+        <div class="join-card">
+          <h3>Hot Desk</h3>
+          <p class="card-highlight">From £350/month</p>
+          <ul>
+            <li>Flexible seating across all floors</li>
+            <li>Community events and workshops</li>
+            <li>Meeting room credits (5hrs/mo)</li>
+            <li>Kitchen and lounge access</li>
+          </ul>
+        </div>
+        <div class="join-card">
+          <h3>Permanent Desk</h3>
+          <p class="card-highlight">From £550/month</p>
+          <ul>
+            <li>Dedicated desk, always yours</li>
+            <li>24/7 building access</li>
+            <li>Meeting room credits (15hrs/mo)</li>
+            <li>Mail handling and storage</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="id-subsection">Fund Card (on dark surface)</h3>
+      <div style="background: var(--dark); padding: 2rem; border-radius: 8px;">
+        <div class="demo-grid-2">
+          <div class="fund-card" style="background: #222; border-left: 4px solid var(--cream); border-radius: 6px;">
+            <h3 style="color: var(--cream);">What you get</h3>
+            <ul>
+              <li style="color: #ddd; border-bottom-color: rgba(255,255,255,0.1);">Priority deal flow from Tower founders</li>
+              <li style="color: #ddd; border-bottom-color: rgba(255,255,255,0.1);">Branded presence in the space</li>
+              <li style="color: #ddd; border-bottom: none;">Exclusive investor events</li>
+            </ul>
+          </div>
+          <div class="fund-card" style="background: #222; border-left: 4px solid var(--cream); border-radius: 6px;">
+            <h3 style="color: var(--cream);">Partnership tiers</h3>
+            <div class="tier"><span class="tier-name" style="color: var(--cream);">Anchor</span><span class="tier-desc" style="color: #ccc;">Full-floor branding, 5 permanent desks, priority deal flow</span></div>
+            <div class="tier"><span class="tier-name" style="color: var(--cream);">Partner</span><span class="tier-desc" style="color: #ccc;">Shared branding, 2 hot desks, quarterly events</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="id-subsection">Company Profile Card</h3>
+      <div class="demo-grid-3">
+        <div class="committed-company" style="border-left: 5px solid var(--red);">
+          <div class="company-logo-row">
+            <span class="company-name">Acme Corp</span>
+          </div>
+          <div class="company-meta-block">
+            <span class="company-meta-line">AI-powered developer tools</span>
+          </div>
+          <div class="company-funding-block">
+            <span class="company-funding-label">Backed by</span>
+            <span class="company-funding-investors">Sequoia, Y Combinator</span>
+          </div>
+        </div>
+        <div class="committed-company" style="border-left: 5px solid var(--red);">
+          <div class="company-logo-row">
+            <span class="company-name">Buildspace</span>
+          </div>
+          <div class="company-meta-block">
+            <span class="company-meta-line">Fintech infrastructure</span>
+          </div>
+          <div class="company-funding-block">
+            <span class="company-funding-label">Backed by</span>
+            <span class="company-funding-investors">a16z, Accel</span>
+          </div>
+        </div>
+        <div class="committed-company" style="border-left: 5px solid var(--red);">
+          <div class="company-logo-row">
+            <span class="company-name">Lumina Health</span>
+          </div>
+          <div class="company-meta-block">
+            <span class="company-meta-line">Digital health platform</span>
+          </div>
+          <div class="company-funding-block">
+            <span class="company-funding-label">Backed by</span>
+            <span class="company-funding-investors">General Catalyst</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         STATS
+         ========================================== -->
+    <section id="stats" class="id-section">
+      <h2 class="id-section-title">Stats</h2>
+      <p class="id-section-desc">Stat counters with Perandory display numbers. Support count-up animation on scroll.</p>
+
+      <h3 class="id-subsection">On red surface (hero style)</h3>
+      <div style="background: var(--red); padding: 3rem; border-radius: 8px;">
+        <div class="hero-stats" style="animation: none; width: 100%;">
+          <div class="hero-stat">
+            <span class="stat-number" data-countup>700+</span>
+            <span class="stat-label">members</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number" data-countup>$500M+</span>
+            <span class="stat-label">raised collectively</span>
+          </div>
+          <div class="hero-stat">
+            <span class="stat-number">46%</span>
+            <span class="stat-label">Global Talent Visa</span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="id-subsection">On cream surface</h3>
+      <div style="background: var(--cream); padding: 2rem; border-radius: 8px;">
+        <div class="life-stat-grid" style="justify-content: flex-start; gap: 3rem;">
+          <div class="life-stat-item" style="text-align: left;">
+            <span class="life-stat-value" style="color: var(--dark);">120+</span>
+            <span class="life-stat-label" style="color: var(--dark); opacity: 0.5;">events per year</span>
+          </div>
+          <div class="life-stat-item" style="text-align: left;">
+            <span class="life-stat-value" style="color: var(--dark);">50+</span>
+            <span class="life-stat-label" style="color: var(--dark); opacity: 0.5;">startups in residence</span>
+          </div>
+          <div class="life-stat-item" style="text-align: left;">
+            <span class="life-stat-value" style="color: var(--dark);">3</span>
+            <span class="life-stat-label" style="color: var(--dark); opacity: 0.5;">floors</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         INPUTS
+         ========================================== -->
+    <section id="inputs" class="id-section">
+      <h2 class="id-section-title">Inputs</h2>
+      <p class="id-section-desc">Form elements for gates, contact forms, and CTAs.</p>
+
+      <h3 class="id-subsection">Password gate (on red)</h3>
+      <div style="background: var(--red); padding: 3rem; border-radius: 8px; text-align: center;">
+        <div class="gate-form" style="margin: 0 auto;">
+          <input type="password" class="gate-input" placeholder="Password">
+          <button class="gate-btn">Enter</button>
+        </div>
+      </div>
+
+      <h3 class="id-subsection">Standalone input</h3>
+      <div style="padding: 2rem; background: var(--off-white); border-radius: 8px;">
+        <input type="email" class="gate-input" placeholder="your@email.com" style="max-width: 400px; width: 100%;">
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CAROUSEL
+         ========================================== -->
+    <section id="carousel" class="id-section">
+      <h2 class="id-section-title">Carousel</h2>
+      <p class="id-section-desc">Horizontal scroll-snap carousel with gradient-overlay captions and indicator dots.</p>
+
+      <div style="background: var(--cream); padding: 2rem 0; border-radius: 8px; overflow: hidden;">
+        <div class="carousel" id="demo-carousel" style="padding: 0 2rem;">
+          <div class="carousel-slide">
+            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: var(--font-display); font-size: 2rem; color: var(--white); opacity: 0.3;">Image 1</span>
+            </div>
+            <div class="carousel-caption">
+              <h3>Founder Talks</h3>
+              <p>Weekly talks from founders, operators, and investors.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--red-dark) 0%, var(--dark) 100%); display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: var(--font-display); font-size: 2rem; color: var(--white); opacity: 0.3;">Image 2</span>
+            </div>
+            <div class="carousel-caption">
+              <h3>Demo Days</h3>
+              <p>Tower Program graduates pitch to London's top investors.</p>
+            </div>
+          </div>
+          <div class="carousel-slide">
+            <div style="width: 100%; height: 300px; background: linear-gradient(135deg, var(--dark) 0%, #333 100%); display: flex; align-items: center; justify-content: center;">
+              <span style="font-family: var(--font-display); font-size: 2rem; color: var(--white); opacity: 0.3;">Image 3</span>
+            </div>
+            <div class="carousel-caption">
+              <h3>Socials & Parties</h3>
+              <p>Rooftop drinks, cinema nights, and BBQs.</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots" id="demo-carousel-dots"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS
+         ========================================== -->
+    <section id="testimonials" class="id-section">
+      <h2 class="id-section-title">Testimonials</h2>
+      <p class="id-section-desc">Quote blocks with cream left border accent.</p>
+
+      <div class="demo-grid-2">
+        <blockquote class="testimonial">
+          <p>"I moved to London knowing nobody. Within a month at Tower, I had a co-founder, three angel investors, and friends I'll have for life."</p>
+          <cite>— Tower resident, Series A founder</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>"Every meeting I need is one floor away. My lawyer, my accountant, three of my investors — they're all in the building."</p>
+          <cite>— Tower resident, fintech founder</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         LOGO GRID
+         ========================================== -->
+    <section id="logo-grid" class="id-section">
+      <h2 class="id-section-title">Logo Grid</h2>
+      <p class="id-section-desc">Labeled rows of partner/company logos with responsive column counts.</p>
+
+      <div style="background: var(--cream); padding: 2rem 3rem; border-radius: 8px;">
+        <div class="logo-row">
+          <span class="logo-row-label">founders from</span>
+          <div class="logo-row-images" style="grid-template-columns: repeat(5, minmax(0, 1fr));">
+            <div class="logo-cell"><div class="logo-placeholder">Logo 1</div></div>
+            <div class="logo-cell"><div class="logo-placeholder">Logo 2</div></div>
+            <div class="logo-cell"><div class="logo-placeholder">Logo 3</div></div>
+            <div class="logo-cell"><div class="logo-placeholder">Logo 4</div></div>
+            <div class="logo-cell"><div class="logo-placeholder">Logo 5</div></div>
+          </div>
+        </div>
+        <div class="logo-row" style="margin-top: 2rem;">
+          <span class="logo-row-label">backed by</span>
+          <div class="logo-row-images" style="grid-template-columns: repeat(4, minmax(0, 1fr));">
+            <div class="logo-cell"><div class="logo-placeholder">Logo A</div></div>
+            <div class="logo-cell"><div class="logo-placeholder">Logo B</div></div>
+            <div class="logo-cell"><div class="logo-placeholder">Logo C</div></div>
+            <div class="logo-cell"><div class="logo-placeholder">Logo D</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         OPERATIONS GRID
+         ========================================== -->
+    <section id="operations" class="id-section">
+      <h2 class="id-section-title">Operations Grid</h2>
+      <p class="id-section-desc">Info tiles on dark/translucent surface with cream left border.</p>
+
+      <div style="background: var(--dark); padding: 2rem; border-radius: 8px;">
+        <div class="ops-grid">
+          <div class="ops-item">
+            <span class="ops-label">Internet</span>
+            <p>1Gbps symmetric fibre, mesh Wi-Fi on every floor</p>
+          </div>
+          <div class="ops-item">
+            <span class="ops-label">Security</span>
+            <p>24/7 CCTV, fob access, individual desk locks</p>
+          </div>
+          <div class="ops-item">
+            <span class="ops-label">Kitchen</span>
+            <p>Free coffee, tea, and snacks. Communal fridge</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         STEPS
+         ========================================== -->
+    <section id="steps" class="id-section">
+      <h2 class="id-section-title">Steps</h2>
+      <p class="id-section-desc">Numbered process list with Perandory display numbers.</p>
+
+      <div style="background: var(--dark); padding: 2rem; border-radius: 8px;">
+        <div class="fund-card fund-card-steps" style="background: #222; border-left: 4px solid var(--cream); border-radius: 6px;">
+          <h3 style="color: var(--cream);">How it works</h3>
+          <ul class="fund-steps">
+            <li style="color: #ddd; border-bottom-color: rgba(255,255,255,0.1);">
+              <span class="fund-step-number" style="color: rgba(245,229,202,0.72);">01</span>
+              <span class="fund-step-copy" style="color: #f1f1f1;">Apply through the Tower website or get referred by an existing member</span>
+            </li>
+            <li style="color: #ddd; border-bottom-color: rgba(255,255,255,0.1);">
+              <span class="fund-step-number" style="color: rgba(245,229,202,0.72);">02</span>
+              <span class="fund-step-copy" style="color: #f1f1f1;">Meet with the community team for a quick intro chat</span>
+            </li>
+            <li style="color: #ddd; border-bottom: none;">
+              <span class="fund-step-number" style="color: rgba(245,229,202,0.72);">03</span>
+              <span class="fund-step-copy" style="color: #f1f1f1;">Move in and start building alongside London's best founders</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         TIERS
+         ========================================== -->
+    <section id="tiers" class="id-section">
+      <h2 class="id-section-title">Tiers</h2>
+      <p class="id-section-desc">Stacked tier list for partnership levels or membership plans.</p>
+
+      <div style="background: var(--dark); padding: 2rem; border-radius: 8px;">
+        <div class="fund-card" style="background: #222; border-left: 4px solid var(--cream); border-radius: 6px;">
+          <h3 style="color: var(--cream);">Partnership Tiers</h3>
+          <div class="tier" style="border-bottom-color: rgba(255,255,255,0.1);">
+            <span class="tier-name" style="color: var(--cream);">Anchor Partner</span>
+            <span class="tier-desc" style="color: #ccc;">Full-floor branding, 5 permanent desks, priority deal flow, quarterly dinners</span>
+          </div>
+          <div class="tier" style="border-bottom-color: rgba(255,255,255,0.1);">
+            <span class="tier-name" style="color: var(--cream);">Growth Partner</span>
+            <span class="tier-desc" style="color: #ccc;">Shared branding, 2 hot desks, monthly office hours</span>
+          </div>
+          <div class="tier" style="border-bottom: none;">
+            <span class="tier-name" style="color: var(--cream);">Community Partner</span>
+            <span class="tier-desc" style="color: #ccc;">Logo on website, event invitations, talent pipeline access</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PHOTO STRIP
+         ========================================== -->
+    <section id="photo-strip" class="id-section">
+      <h2 class="id-section-title">Photo Strip</h2>
+      <p class="id-section-desc">4-column image grid at 4:3 ratio. Collapses to 2 columns on mobile.</p>
+
+      <div class="join-photos-strip">
+        <div style="background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%); aspect-ratio: 4/3; border-radius: 6px;"></div>
+        <div style="background: linear-gradient(135deg, var(--cream) 0%, #f5d89a 100%); aspect-ratio: 4/3; border-radius: 6px;"></div>
+        <div style="background: linear-gradient(135deg, var(--dark) 0%, #333 100%); aspect-ratio: 4/3; border-radius: 6px;"></div>
+        <div style="background: linear-gradient(135deg, var(--off-white) 0%, #ddd 100%); aspect-ratio: 4/3; border-radius: 6px;"></div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SPLIT LAYOUT
+         ========================================== -->
+    <section id="split-layout" class="id-section">
+      <h2 class="id-section-title">Split Layout</h2>
+      <p class="id-section-desc">Two-column photo + content panel. Used in The Space section.</p>
+
+      <div class="space-layout" style="border-radius: 8px; overflow: hidden;">
+        <div class="space-photo">
+          <div style="width: 100%; aspect-ratio: 3/4; background: linear-gradient(180deg, var(--red) 0%, var(--red-dark) 100%); display: flex; align-items: center; justify-content: center;">
+            <span style="font-family: var(--font-display); font-size: 2rem; color: var(--white); opacity: 0.3;">Photo</span>
+          </div>
+        </div>
+        <div class="space-details">
+          <p class="space-desc">A full description of the space goes here. Multiple paragraphs of body text explaining features and amenities.</p>
+          <div class="space-grid">
+            <div class="space-item">
+              <span class="space-label">Location</span>
+              <p>Holborn, London WC1</p>
+            </div>
+            <div class="space-item">
+              <span class="space-label">Floors</span>
+              <p>3 floors of workspace</p>
+            </div>
+            <div class="space-item">
+              <span class="space-label">Capacity</span>
+              <p>120 desks</p>
+            </div>
+            <div class="space-item">
+              <span class="space-label">Access</span>
+              <p>24/7, key fob entry</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION HEADERS
+         ========================================== -->
+    <section id="section-headers" class="id-section">
+      <h2 class="id-section-title">Section Headers</h2>
+      <p class="id-section-desc">Large Perandory titles used at the top of each content section.</p>
+
+      <div style="padding: 3rem; background: var(--off-white); border-radius: 8px;">
+        <div class="section-header">
+          <h2 class="section-title" style="color: var(--dark);">the community</h2>
+        </div>
+      </div>
+
+      <div style="padding: 3rem; background: var(--dark); border-radius: 8px; margin-top: 1rem;">
+        <div class="section-header">
+          <h2 class="section-title" style="color: var(--off-white);">the space</h2>
+        </div>
+      </div>
+
+      <div style="padding: 3rem; background: var(--cream); border-radius: 8px; margin-top: 1rem;">
+        <div class="section-header">
+          <h2 class="section-title" style="color: var(--dark);">join tower</h2>
+        </div>
+      </div>
+
+      <div style="padding: 3rem; background: var(--red); border-radius: 8px; margin-top: 1rem;">
+        <div class="section-header">
+          <h2 class="section-title" style="color: var(--white);">get in touch</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         STAR PATTERN
+         ========================================== -->
+    <section id="star-pattern" class="id-section">
+      <h2 class="id-section-title">Star Pattern</h2>
+      <p class="id-section-desc">The Tower four-point star motif. Used as section backgrounds and the gate overlay.</p>
+
+      <div class="star-demo-grid">
+        <div class="star-demo" style="background: var(--red);">
+          <svg class="star-demo-svg" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="white" opacity="0.15"/></svg>
+          <span class="star-demo-label">On red (15% white)</span>
+        </div>
+        <div class="star-demo" style="background: var(--dark);">
+          <svg class="star-demo-svg" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="#D2000F" opacity="0.10"/></svg>
+          <span class="star-demo-label">On dark (10% red-deep)</span>
+        </div>
+        <div class="star-demo" style="background: var(--cream);">
+          <svg class="star-demo-svg" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="#D2000F" opacity="0.08"/></svg>
+          <span class="star-demo-label">On cream (8% red-deep)</span>
+        </div>
+        <div class="star-demo" style="background: var(--off-white);">
+          <svg class="star-demo-svg" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="#e61d2b" opacity="0.06"/></svg>
+          <span class="star-demo-label">On off-white (6% red)</span>
+        </div>
+      </div>
+
+      <h3 class="id-subsection">Multi-star pattern (section background)</h3>
+      <div style="position: relative; height: 200px; background: var(--red); border-radius: 8px; overflow: hidden;">
+        <svg style="position: absolute; height: 80%; width: auto; top: 10%; left: -2%; opacity: 0.10; color: var(--red-deep);" viewBox="0 0 925 1108.31" preserveAspectRatio="xMidYMid meet">
+          <path d="M277.508 923.309C277.692 974.332 319.036 1015.64 370.009 1015.64C318.921 1015.64 277.508 1057.13 277.508 1108.31C277.323 1057.29 235.98 1015.98 185.007 1015.98C236.093 1015.98 277.508 974.489 277.508 923.309ZM462.5 923.309C462.684 974.332 504.028 1015.64 555.001 1015.64C503.913 1015.64 462.5 1057.13 462.5 1108.31C462.315 1057.29 420.973 1015.98 370 1015.98C421.086 1015.98 462.5 974.489 462.5 923.309ZM92.501 738.308C92.6853 789.331 134.028 830.637 185.001 830.637C133.914 830.637 92.501 872.128 92.501 923.309C92.316 872.285 50.9729 830.979 0 830.979C51.0865 830.979 92.5008 789.488 92.501 738.308ZM462.5 738.308C462.684 789.331 504.028 830.637 555.001 830.637C503.913 830.637 462.5 872.128 462.5 923.309C462.315 872.285 420.973 830.98 370 830.979C421.086 830.979 462.5 789.488 462.5 738.308ZM647.508 738.308C647.692 789.331 689.035 830.637 740.008 830.637C688.92 830.637 647.508 872.128 647.508 923.309C647.323 872.285 605.98 830.98 555.007 830.979C606.093 830.979 647.508 789.488 647.508 738.308ZM832.5 738.308C832.684 789.331 874.027 830.637 925 830.637C873.913 830.637 832.5 872.128 832.5 923.309C832.315 872.285 790.972 830.979 739.999 830.979C791.086 830.979 832.5 789.488 832.5 738.308ZM92.501 183.304C92.6851 234.327 134.028 275.633 185.001 275.633C133.914 275.633 92.501 317.125 92.501 368.306C92.316 317.282 50.9729 275.976 0 275.976C51.0866 275.976 92.501 234.485 92.501 183.304ZM277.508 0C277.692 51.0238 319.036 92.3291 370.009 92.3291C319.261 92.3291 278.059 133.27 277.514 183.981C278.059 234.693 319.262 275.633 370.009 275.633C318.921 275.633 277.508 317.125 277.508 368.306C277.323 317.282 235.98 275.976 185.007 275.976C235.754 275.976 276.956 235.035 277.501 184.323C276.954 133.612 235.754 92.6719 185.007 92.6719C236.093 92.6719 277.508 51.1808 277.508 0ZM462.5 183.303C462.684 234.327 504.028 275.632 555.001 275.632C503.914 275.632 462.5 317.123 462.5 368.304C462.315 317.28 420.973 275.975 370 275.975C421.086 275.974 462.5 234.483 462.5 183.303ZM832.5 183.303C832.684 234.326 874.027 275.632 925 275.632C873.913 275.632 832.5 317.123 832.5 368.304C832.315 317.28 790.972 275.975 739.999 275.975C791.086 275.975 832.5 234.484 832.5 183.303ZM647.508 0C647.692 51.0237 689.035 92.329 740.008 92.3291C688.92 92.3292 647.508 133.82 647.508 185.001C647.323 133.977 605.98 92.6719 555.007 92.6719C606.093 92.6718 647.508 51.1808 647.508 0Z" fill="currentColor"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         NAV BAR
+         ========================================== -->
+    <section id="nav-bar" class="id-section">
+      <h2 class="id-section-title">Navigation</h2>
+      <p class="id-section-desc">Sticky nav bar with red backdrop, appears on scroll past hero. Hamburger on mobile.</p>
+
+      <div style="position: relative; border-radius: 8px; overflow: hidden;">
+        <div class="nav" style="position: relative; transform: none;">
+          <div class="nav-logo">Tower</div>
+          <div class="nav-links" style="display: flex; position: static; opacity: 1; transform: none; pointer-events: all; background: none; padding: 0;">
+            <a href="#">Community</a>
+            <a href="#">The Space</a>
+            <a href="#">Join</a>
+            <a href="#">For Funds</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         HERO
+         ========================================== -->
+    <section id="hero" class="id-section">
+      <h2 class="id-section-title">Hero</h2>
+      <p class="id-section-desc">Full-viewport hero with display title, tagline grid, and stat bar. Entrance animations on load.</p>
+
+      <div style="position: relative; background: var(--red); border-radius: 8px; overflow: hidden; padding: 4rem 3rem;">
+        <div style="position: relative; z-index: 1; max-width: 900px;">
+          <h1 style="font-family: var(--font-display); font-size: clamp(3rem, 10vw, 7rem); font-weight: 400; color: var(--white); text-transform: uppercase; letter-spacing: 0.02em; line-height: 0.85;">Tower</h1>
+          <div style="margin-top: 1.5rem;">
+            <p style="font-size: clamp(1.1rem, 2vw, 1.8rem); font-weight: 700; color: var(--white); line-height: 1.08;">Where outlier founders launch, grow, and stay</p>
+            <p style="font-size: 0.8rem; font-weight: 300; color: var(--white); opacity: 0.5; margin-top: 1rem; letter-spacing: 0.08em; text-transform: uppercase;">Startup hub &middot; Holborn, London</p>
+            <a href="#" class="hero-cta" style="animation: none; margin-top: 1.5rem;">See how to join</a>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem;">
+            <div class="hero-stat">
+              <span class="stat-number">700+</span>
+              <span class="stat-label">members</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-number">$500M+</span>
+              <span class="stat-label">raised collectively</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-number">46%</span>
+              <span class="stat-label">Global Talent Visa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ANIMATIONS
+         ========================================== -->
+    <section id="animations" class="id-section">
+      <h2 class="id-section-title">Animations</h2>
+      <p class="id-section-desc">Scroll-reveal and entrance animation classes. Add <code>.reveal</code>, <code>.reveal-left</code>, or <code>.reveal-scale</code> to any element.</p>
+
+      <div class="anim-grid">
+        <div class="anim-demo">
+          <span class="anim-label">.reveal</span>
+          <span class="anim-desc">translateY(50px) → 0</span>
+          <div class="anim-box reveal">Fade up</div>
+        </div>
+        <div class="anim-demo">
+          <span class="anim-label">.reveal-left</span>
+          <span class="anim-desc">translateX(-40px) → 0</span>
+          <div class="anim-box reveal-left">Slide right</div>
+        </div>
+        <div class="anim-demo">
+          <span class="anim-label">.reveal-scale</span>
+          <span class="anim-desc">scale(0.95) → 1</span>
+          <div class="anim-box reveal-scale">Scale in</div>
+        </div>
+      </div>
+      <button class="replay-btn" id="replay-btn">Replay animations</button>
+
+      <h3 class="id-subsection">Hover elevations</h3>
+      <div class="demo-grid-3">
+        <div class="join-card" style="text-align: center; padding: 2rem;">
+          <h3>Card hover</h3>
+          <p style="font-size: 0.85rem; opacity: 0.6;">translateY(-4px) + scale(1.01)</p>
+        </div>
+        <div class="ops-item" style="text-align: center;">
+          <span class="ops-label">Tile hover</span>
+          <p>translateY(-2px)</p>
+        </div>
+        <div class="contact-btn" style="text-align: center; cursor: pointer;">
+          Button hover<br><span style="font-size: 0.7rem; font-weight: 400; opacity: 0.6;">translateY(-2px)</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Carousel dots
+    function initDemoCarousel() {
+      const carousel = document.getElementById('demo-carousel');
+      const dotsContainer = document.getElementById('demo-carousel-dots');
+      if (!carousel || !dotsContainer) return;
+      const slides = carousel.querySelectorAll('.carousel-slide');
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.classList.add('carousel-dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+          slides[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        });
+        dotsContainer.appendChild(dot);
+      });
+      const dots = dotsContainer.querySelectorAll('.carousel-dot');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const idx = Array.from(slides).indexOf(entry.target);
+            dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+          }
+        });
+      }, { root: carousel, threshold: 0.6 });
+      slides.forEach(s => observer.observe(s));
+    }
+
+    // Scroll reveal
+    function initReveal() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+      document.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach(el => observer.observe(el));
+    }
+
+    // Replay button
+    document.getElementById('replay-btn').addEventListener('click', () => {
+      document.querySelectorAll('.anim-box').forEach(el => {
+        el.classList.remove('visible');
+        void el.offsetHeight;
+      });
+      setTimeout(() => {
+        document.querySelectorAll('.anim-box').forEach(el => el.classList.add('visible'));
+      }, 100);
+    });
+
+    // Sidebar active state
+    const sections = document.querySelectorAll('.id-section');
+    const navLinks = document.querySelectorAll('.id-nav a');
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+    sections.forEach(s => sectionObserver.observe(s));
+
+    initDemoCarousel();
+    initReveal();
+  </script>
 </body>
 </html>
