@@ -1,0 +1,410 @@
+/* ========================================
+   Tower Identity – Component Showcase
+   ======================================== */
+
+@import url('../tokens.css');
+@import url('../components.css');
+
+body {
+  color: var(--dark);
+  background: #fafafa;
+}
+
+/* ----------------------------------------
+   Showcase Layout
+   ---------------------------------------- */
+
+.id-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: var(--dark);
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.id-nav-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.id-nav-title span {
+  font-family: var(--font);
+  font-size: 0.65rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--cream);
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.id-nav ul {
+  list-style: none;
+}
+
+.id-nav li {
+  margin-bottom: 0.15rem;
+}
+
+.id-nav a {
+  display: block;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  letter-spacing: 0.02em;
+}
+
+.id-nav a:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.id-nav a.active {
+  color: var(--cream);
+  background: rgba(255, 234, 195, 0.08);
+}
+
+.id-main {
+  margin-left: 220px;
+  padding: 3rem 4rem 6rem;
+  max-width: 1100px;
+}
+
+.id-header {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.id-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  color: var(--dark);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.id-header p {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--dark);
+  opacity: 0.6;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.id-section {
+  margin-bottom: 5rem;
+  scroll-margin-top: 2rem;
+}
+
+.id-section-title {
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.id-section-desc {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--dark);
+  opacity: 0.6;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.id-section-desc code {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+.id-section-desc strong {
+  font-weight: 600;
+}
+
+.id-subsection {
+  font-family: var(--font);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--dark);
+  opacity: 0.4;
+  margin: 2rem 0 1rem;
+}
+
+/* ----------------------------------------
+   Color Swatches
+   ---------------------------------------- */
+
+.swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 1.25rem;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.swatch-block {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.swatch-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.swatch-value {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.75rem;
+  color: var(--dark);
+  opacity: 0.5;
+}
+
+.swatch-var {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.7rem;
+  color: var(--red);
+  opacity: 0.7;
+}
+
+/* Surface combinations */
+.surface-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.surface-demo {
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.surface-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
+}
+
+.surface-body {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* ----------------------------------------
+   Typography Specimens
+   ---------------------------------------- */
+
+.type-specimen {
+  padding: 2rem;
+  border-radius: 8px;
+  background: var(--off-white);
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.type-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+}
+
+.type-meta {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.65rem;
+  opacity: 0.35;
+}
+
+.type-sample {
+  margin-top: 0.5rem;
+}
+
+/* ----------------------------------------
+   Button Demo Rows
+   ---------------------------------------- */
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* ----------------------------------------
+   Demo Grids
+   ---------------------------------------- */
+
+.demo-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.demo-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.logo-placeholder {
+  width: 100%;
+  height: 44px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--dark);
+  opacity: 0.4;
+}
+
+/* ----------------------------------------
+   Star Demo
+   ---------------------------------------- */
+
+.star-demo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.star-demo {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.star-demo-svg {
+  width: 60%;
+  height: auto;
+}
+
+.star-demo-label {
+  font-size: 0.65rem;
+  font-weight: 400;
+  opacity: 0.7;
+  color: inherit;
+  text-align: center;
+}
+
+.star-demo:nth-child(1) .star-demo-label,
+.star-demo:nth-child(2) .star-demo-label { color: var(--white); }
+
+/* ----------------------------------------
+   Animation Demos
+   ---------------------------------------- */
+
+.anim-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.anim-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.anim-label {
+  font-family: 'SF Mono', Monaco, monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--red);
+}
+
+.anim-desc {
+  font-size: 0.7rem;
+  opacity: 0.4;
+  margin-bottom: 0.5rem;
+}
+
+.anim-box {
+  padding: 2rem;
+  background: var(--off-white);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.replay-btn {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--dark);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.replay-btn:hover {
+  background: #333;
+}
+
+/* ----------------------------------------
+   Responsive (identity-page-specific)
+   ---------------------------------------- */
+
+@media (max-width: 900px) {
+  .id-nav { display: none; }
+  .id-main { margin-left: 0; padding: 2rem 1.5rem 4rem; }
+  .demo-grid-2 { grid-template-columns: 1fr; }
+  .demo-grid-3 { grid-template-columns: 1fr; }
+  .anim-grid { grid-template-columns: 1fr; }
+  .star-demo-grid { grid-template-columns: repeat(2, 1fr); }
+  .surface-grid { grid-template-columns: 1fr; }
+  .swatch-grid { grid-template-columns: repeat(4, 1fr); }
+}

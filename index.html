@@ -7,35 +7,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23e61d2b' width='32' height='32' rx='4'/><text x='16' y='24' text-anchor='middle' font-size='22' font-weight='bold' fill='white' font-family='serif'>T</text></svg>">
   <meta name="description" content="Tower is a startup hub in Holborn, London. 700+ members, $500M+ raised collectively. Where outlier founders launch, grow, and stay.">
   <meta property="og:title" content="Tower – Where London's Best Founders Launch, Grow, and Stay">
   <meta property="og:description" content="Startup hub in Holborn, London. 700+ members, $500M+ raised collectively.">
   <meta property="og:type" content="website">
   <style>
-    @font-face {
-      font-family: 'Perandory';
-      src: url('tower-2-confidential/assets/PERANDORY/Perandory-Semi-Condensed.otf') format('opentype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    :root {
-      --red: #e61d2b;
-      --red-dark: #ca0024;
-      --cream: #FFEAC3;
-      --dark: #141414;
-      --font: 'Unbounded', sans-serif;
-      --font-display: 'Perandory', Georgia, serif;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { font-size: 16px; }
-
     body {
-      font-family: var(--font);
       color: #fff;
       background: var(--dark);
       min-height: 100vh;
@@ -44,8 +23,6 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     .stars-bg {
@@ -59,12 +36,48 @@
     .star {
       position: absolute;
       fill: var(--red);
-      opacity: 0.07;
     }
 
-    .star-1 { width: 320px; top: -60px; left: -80px; opacity: 0.09; }
-    .star-2 { width: 200px; bottom: -40px; right: -50px; opacity: 0.06; }
-    .star-3 { width: 140px; top: 30%; right: 10%; opacity: 0.04; }
+    .star-1 { width: 420px; top: -80px; left: -100px; opacity: 0.18; animation: drift1 25s ease-in-out infinite, pulse1 8s ease-in-out infinite; }
+    .star-2 { width: 300px; bottom: -60px; right: -70px; opacity: 0.14; animation: drift2 30s ease-in-out infinite, pulse2 10s ease-in-out infinite; }
+    .star-3 { width: 200px; top: 25%; right: 8%; opacity: 0.10; animation: drift3 20s ease-in-out infinite, pulse3 12s ease-in-out infinite; }
+    .star-4 { width: 160px; bottom: 20%; left: 5%; opacity: 0.08; animation: drift3 22s ease-in-out infinite reverse, pulse2 9s ease-in-out infinite; }
+    .star-5 { width: 100px; top: 10%; left: 40%; opacity: 0.06; animation: drift1 28s ease-in-out infinite reverse, pulse3 11s ease-in-out infinite; }
+
+    @keyframes drift1 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(30px, 20px) rotate(8deg); }
+      50% { transform: translate(-10px, 40px) rotate(-5deg); }
+      75% { transform: translate(20px, -10px) rotate(3deg); }
+    }
+
+    @keyframes drift2 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-20px, -30px) rotate(-10deg); }
+      50% { transform: translate(25px, -15px) rotate(6deg); }
+      75% { transform: translate(-15px, 20px) rotate(-4deg); }
+    }
+
+    @keyframes drift3 {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(15px, -25px) rotate(12deg); }
+      66% { transform: translate(-20px, 10px) rotate(-8deg); }
+    }
+
+    @keyframes pulse1 {
+      0%, 100% { opacity: 0.18; transform: scale(1); }
+      50% { opacity: 0.28; transform: scale(1.08); }
+    }
+
+    @keyframes pulse2 {
+      0%, 100% { opacity: 0.14; transform: scale(1); }
+      50% { opacity: 0.22; transform: scale(1.1); }
+    }
+
+    @keyframes pulse3 {
+      0%, 100% { opacity: 0.10; transform: scale(1); }
+      50% { opacity: 0.18; transform: scale(1.12); }
+    }
 
     .container {
       position: relative;
@@ -82,11 +95,12 @@
 
     .logo {
       font-family: var(--font-display);
-      font-size: clamp(4rem, 12vw, 8rem);
+      font-size: clamp(5rem, 15vw, 10rem);
       font-weight: 400;
       letter-spacing: 0.02em;
-      color: #fff;
+      color: var(--red);
       margin-bottom: 1.5rem;
+      text-shadow: 0 0 80px rgba(230, 29, 43, 0.4), 0 0 160px rgba(230, 29, 43, 0.2);
     }
 
     .tagline {
@@ -106,23 +120,43 @@
       margin-bottom: 3rem;
     }
 
-    .cta {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: var(--red);
-      color: #fff;
-      text-decoration: none;
-      font-family: var(--font);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      border-radius: 60px;
-      transition: background 0.2s, transform 0.2s;
+    .location .dot {
+      color: var(--red);
+      opacity: 0.8;
     }
 
-    .cta:hover {
-      background: var(--red-dark);
-      transform: scale(1.03);
+    .apply-note {
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.45);
+      letter-spacing: 0.04em;
+    }
+
+    .luma-link {
+      display: inline-block;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--red);
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(230, 29, 43, 0.35);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .luma-link:hover {
+      color: #fff;
+      border-color: var(--red);
+    }
+
+    .red-line {
+      width: 40px;
+      height: 2px;
+      background: var(--red);
+      margin: 2.5rem auto 0;
+      opacity: 0.5;
+      border-radius: 1px;
     }
 
     .footer {
@@ -133,6 +167,18 @@
       letter-spacing: 0.1em;
       z-index: 1;
     }
+
+    @media (max-width: 600px) {
+      .star-1 { width: 180px; top: -40px; left: -50px; }
+      .star-2 { width: 130px; bottom: -30px; right: -30px; }
+      .star-3 { width: 90px; }
+      .star-4 { width: 70px; }
+      .star-5 { width: 50px; }
+
+      .container { padding: 1.5rem; }
+
+      .apply-note { padding: 0 1rem; }
+    }
   </style>
 </head>
 <body>
@@ -141,13 +187,17 @@
     <svg class="star star-1" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
     <svg class="star star-2" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
     <svg class="star star-3" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
+    <svg class="star star-4" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
+    <svg class="star star-5" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
   </div>
 
   <div class="container">
     <h1 class="logo">Tower</h1>
     <p class="tagline">Where outlier founders launch, grow, and stay</p>
-    <p class="location">Startup hub &middot; Holborn, London</p>
-    <a href="mailto:hello@tower.community" class="cta">Get in touch</a>
+    <p class="location">Startup hub <span class="dot">&middot;</span> Kings Cross, London</p>
+    <p class="apply-note">To apply, ask a community member to recommend you</p>
+    <a class="luma-link" href="https://lu.ma/tower" target="_blank" rel="noopener">Events on Luma ↗</a>
+    <div class="red-line"></div>
   </div>
 
   <div class="footer">tower.community</div>
