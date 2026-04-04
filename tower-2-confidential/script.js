@@ -185,6 +185,11 @@ function initMobileNav() {
 
 
 
+// Show brick walls after page loads (prevent flash)
+window.addEventListener('load', function() {
+  document.body.classList.add('loaded');
+});
+
 // Shake animation (injected as CSS)
 const style = document.createElement('style');
 style.textContent = `
