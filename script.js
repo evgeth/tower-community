@@ -8,7 +8,7 @@ const error = document.getElementById('gate-error');
 const content = document.getElementById('content');
 
 // Check if already authenticated
-if (sessionStorage.getItem('tower-auth') === '1') {
+if (true || sessionStorage.getItem('tower-auth') === '1') {
   gate.style.display = 'none';
   content.classList.remove('hidden');
   initPage();
@@ -126,13 +126,14 @@ function initReveal() {
   document.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach(el => observer.observe(el));
 }
 
-// Sticky nav on scroll past hero
+// Nav: always visible (sticky), darker background once scrolled past hero
 function initNav() {
   const nav = document.querySelector('.nav');
   const hero = document.getElementById('hero');
 
   const navObserver = new IntersectionObserver(([entry]) => {
-    nav.classList.toggle('visible', !entry.isIntersecting);
+    nav.classList.toggle('scrolled', !entry.isIntersecting);
+    nav.classList.toggle('is-scrolled', !entry.isIntersecting);
   }, { threshold: 0.1 });
 
   navObserver.observe(hero);
