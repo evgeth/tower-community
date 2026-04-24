@@ -1,0 +1,9 @@
+# Local Claude Code config (dev server launch.json etc.)
+.claude/
+
+# macOS
+.DS_Store
+
+# Node (wrangler build artifacts, if ever)
+node_modules/
+.wrangler/

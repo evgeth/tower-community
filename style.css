@@ -1741,23 +1741,20 @@ section[id] {
 .backed-by .inv-speedinvest    { height: 18px; }
 .backed-by .inv-mento          { height: 18px; }
 
-/* Large Tower Founder cards — proportionally scaled (~1.5x) */
-.founder-photocard-lg .backed-by { margin-top: 0.8rem; padding-top: 0.8rem; gap: 1rem; }
-.founder-photocard-lg .backed-by-label { font-size: 0.65rem; }
-.founder-photocard-lg .backed-by .inv-sequoia        { height: 20px; }
-.founder-photocard-lg .backed-by .inv-firstround     { height: 24px; }
-.founder-photocard-lg .backed-by .inv-gc             { height: 28px; }
-.founder-photocard-lg .backed-by .inv-accel          { height: 26px; }
-.founder-photocard-lg .backed-by .inv-yc             { height: 26px; }
-.founder-photocard-lg .backed-by .inv-a16z           { height: 26px; }
-.founder-photocard-lg .backed-by .inv-goodwater      { height: 26px; }
-.founder-photocard-lg .backed-by .inv-lightspeed     { height: 28px; }
-.founder-photocard-lg .backed-by .inv-coinbase       { height: 26px; }
-.founder-photocard-lg .backed-by .inv-dcg            { height: 26px; }
-.founder-photocard-lg .backed-by .inv-mosaic         { height: 24px; }
-.founder-photocard-lg .backed-by .inv-trinity        { height: 22px; }
-.founder-photocard-lg .backed-by .inv-begin          { height: 22px; }
-.founder-photocard-lg .backed-by .inv-s16            { height: 22px; }
+/* Large Tower Founder cards — label on own row, logos fill next row */
+.founder-photocard-lg .backed-by { margin-top: 0.8rem; padding-top: 0.8rem; gap: 0.5rem 0.75rem; }
+.founder-photocard-lg .backed-by-label { font-size: 0.6rem; flex-basis: 100%; margin-bottom: -0.15rem; }
+.founder-photocard-lg .backed-by .inv-sequoia        { height: 12px; }
+.founder-photocard-lg .backed-by .inv-firstround     { height: 22px; }
+.founder-photocard-lg .backed-by .inv-agi-house      { height: 20px; }
+.founder-photocard-lg .backed-by .inv-gc             { height: 18px; }
+.founder-photocard-lg .backed-by .inv-lightspeed     { height: 18px; }
+.founder-photocard-lg .backed-by .inv-coinbase       { height: 16px; }
+.founder-photocard-lg .backed-by .inv-dcg            { height: 18px; }
+.founder-photocard-lg .backed-by .inv-mosaic         { height: 16px; }
+.founder-photocard-lg .backed-by .inv-trinity        { height: 16px; }
+.founder-photocard-lg .backed-by .inv-begin          { height: 16px; }
+.founder-photocard-lg .backed-by .inv-s16            { height: 16px; }
 
 /* ---- Ghost seats: FOMO placeholder cards ---- */
 .founder-photocard-ghost {
