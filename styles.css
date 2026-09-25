@@ -1,0 +1,421 @@
+@font-face{font-family:Aspekta;src:url('assets/Aspekta-500.otf') format('opentype');font-weight:500;font-display:swap}
+@font-face{font-family:Aspekta;src:url('assets/Aspekta-550.otf') format('opentype');font-weight:550;font-display:swap}
+@font-face{font-family:Aspekta;src:url('assets/Aspekta-600.otf') format('opentype');font-weight:600;font-display:swap}
+:root{color-scheme:dark;--red:#E61E2B;--ink:#171515;--paper:#F9FBFF;--soft:#FFE9E9;--neutral:#F3F3F3;--line:#353232;--muted:#aaa6a6;--surface:#201e1e}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--ink);color:var(--paper);font:500 15px/1.65 Aspekta,Arial,sans-serif;letter-spacing:0}button,a{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}img{display:block;max-width:100%}h1,h2,h3,p{margin:0}h1,h2,h3{font-weight:500;letter-spacing:0;line-height:1.23}strong{font-weight:600}.quiet{color:var(--muted)}:focus-visible{outline:2px solid var(--paper);outline-offset:5px}::selection{background:var(--red);color:#fff}.skip-link{position:absolute;left:16px;top:-90px;z-index:100;background:var(--paper);color:var(--ink);padding:10px 15px}.skip-link:focus{top:12px}.wrap,.frame{width:min(calc(100% - 64px),1120px);margin-inline:auto}
+.site-header{position:sticky;top:0;z-index:50;height:72px;padding:0 max(32px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:30px;background:var(--ink);border-bottom:1px solid var(--line)}.brand{width:88px;flex:none}.brand img{width:100%;height:auto}.desktop-nav{display:flex;gap:27px}.desktop-nav a{font-size:14px;color:var(--muted)}.desktop-nav a:hover,.footer a:hover{color:var(--paper)}.header-cta,.button{display:inline-flex;align-items:center;justify-content:space-between;gap:28px;min-height:44px;padding:10px 18px;font-size:14px;white-space:nowrap;border-radius:4px;font-weight:550}.header-cta{border:1px solid #5a5555;padding:7px 15px}.header-cta:hover{border-color:var(--paper)}.button-light{background:var(--red);color:#fff}.button-dark{background:var(--paper);color:var(--ink)}.button:hover{opacity:.85}.menu-toggle,.mobile-nav{display:none}
+.hero{margin-top:0;padding-top:76px;padding-bottom:54px;display:grid;grid-template-columns:35% 65%;align-items:start;gap:0}.hero-mark{padding:10px 50px 0 0}.hero-mark img{width:100%;max-width:335px;height:auto}.hero-copy{padding-left:25px;display:flex;align-items:flex-start;flex-direction:column;gap:25px}.hero-copy h1{font-size:clamp(31px,3.4vw,44px);max-width:655px;line-height:1.2}.hero-copy p{font-size:16px;line-height:1.65;max-width:530px;margin-top:23px;color:var(--muted)}.stats{display:grid;grid-template-columns:1fr 1fr;padding:26px 0 30px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.stats>div{display:flex;align-items:baseline;gap:20px}.stats>div+div{padding-left:25px}.stats strong{font-size:36px;font-weight:550;line-height:1.1}.stats span{font-size:14px;color:var(--muted)}
+.section{padding-top:112px}.section-heading{display:flex;justify-content:space-between;align-items:start;gap:55px;padding-bottom:30px}.section-heading h2{font-size:clamp(28px,2.7vw,35px);max-width:610px}.section-heading p{font-size:15px;max-width:370px;color:var(--muted);line-height:1.65}.founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.founder-card{display:grid;grid-template-columns:160px 1fr;min-height:195px;border-bottom:1px solid var(--line);padding-bottom:24px;gap:22px}.founder-card>img{width:160px;height:195px;object-fit:cover;object-position:center top;border-radius:4px}.founder-card>div{display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.founder-card h3{font-size:21px;font-weight:550}.founder-card p{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.5}.company-mark{height:29px;width:auto;max-width:110px;object-fit:contain;object-position:center;background:var(--paper);padding:5px 8px;border-radius:2px}.founder-card .company-mark{margin-top:18px}
+.member-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.member-card>img{width:100%;height:185px;object-fit:cover;object-position:center top;border-radius:4px}.member-card>div{padding:17px 0 0;display:flex;align-items:flex-start;flex-direction:column;min-height:132px}.member-card h3{font-size:18px;font-weight:550;margin-top:15px}.member-card p{font-size:13px;color:var(--muted);margin-top:5px}.logo-groups{margin-top:50px;display:grid;gap:30px}.logo-groups h3{font-size:17px;font-weight:500;color:var(--muted);margin-bottom:17px}.logo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.logo-grid img{width:100%;height:72px;object-fit:contain;padding:20px 25px;background:var(--paper);border-radius:3px}.logo-grid-investors{grid-template-columns:repeat(5,1fr)}
+.audience-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;border-top:1px solid var(--line)}.audience-grid article{padding:28px 0 0;min-height:175px}.audience-grid h3{font-size:24px;font-weight:550;max-width:420px}.audience-grid p{font-size:15px;line-height:1.65;color:var(--muted);margin-top:18px;max-width:430px}.benefits{border-top:1px solid var(--line)}.benefits article{display:grid;grid-template-columns:65px 1fr;min-height:125px;border-bottom:1px solid var(--line)}.benefit-symbol{font-size:25px;color:#d4cfcf;padding-top:24px;display:flex;justify-content:center;align-items:flex-start}.benefits article>div:last-child{padding:24px 20px}.benefits h3{font-size:21px;font-weight:550}.benefits p{font-size:15px;color:var(--muted);max-width:665px;margin-top:7px;line-height:1.65}
+.event-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.event-gallery img{width:100%;aspect-ratio:1.3;object-fit:cover;border-radius:4px;background:var(--surface)}.calendar-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-top:55px;margin-bottom:23px}.calendar-head h3{font-size:25px;font-weight:550}.calendar-head p{font-size:14px;color:var(--muted);margin-top:8px}.text-link{font-size:14px;border-bottom:1px solid #666;padding-bottom:4px;white-space:nowrap}.text-link:hover{border-color:var(--paper)}.luma-calendar{display:block;width:100%;height:450px;border:1px solid var(--line);border-radius:4px;background:var(--ink);color-scheme:dark}
+.join-panel{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:45px 0;display:flex;align-items:center;justify-content:space-between;gap:40px}.join-panel h2{font-size:clamp(32px,3.8vw,47px)}.join-panel p{font-size:16px;color:var(--muted);max-width:545px;margin-top:20px}.join-panel .button{flex:none}.faq-list{border-top:1px solid var(--line)}.faq-list details{border-bottom:1px solid var(--line)}.faq-list summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:30px;padding:21px 0;font-size:17px;font-weight:500}.faq-list summary::-webkit-details-marker{display:none}.faq-list summary:after{content:'+';font-size:24px;color:var(--muted)}.faq-list details[open] summary:after{content:'−'}.faq-list p{padding:0 0 24px;max-width:730px;font-size:15px;color:var(--muted)}.faq-list a{text-decoration:underline}.contact-panel{border-top:1px solid var(--line);padding:35px 0;display:flex;justify-content:space-between;align-items:center;gap:35px}.contact h2{font-size:31px;font-weight:550}.contact p{font-size:15px;color:var(--muted);max-width:520px;margin-top:12px}.footer{margin-top:70px;padding:35px 0 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:end;gap:30px}.footer img{width:135px}.footer p{font-size:13px;color:var(--muted);margin-top:15px}.footer nav{display:flex;gap:23px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+@media(max-width:1000px){.desktop-nav{gap:16px}.founder-card{grid-template-columns:130px 1fr;gap:17px}.founder-card>img{width:130px;height:175px}.member-grid{gap:15px}.member-card>img{height:165px}.hero{grid-template-columns:31% 69%}.hero-mark{padding-right:28px}.hero-copy h1{font-size:36px}.stats>div{gap:12px}.stats strong{font-size:32px}}
+@media(max-width:760px){html{scroll-padding-top:75px}.wrap,.frame{width:calc(100% - 40px)}.site-header{height:64px;padding:0 20px}.brand{width:80px}.desktop-nav,.header-cta{display:none}.menu-toggle{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;width:44px;height:44px;background:transparent;border:0}.menu-toggle span{width:24px;height:1px;background:var(--paper)}.mobile-nav:not([hidden]){display:flex;position:fixed;z-index:49;top:64px;left:0;right:0;flex-direction:column;padding:10px 24px 22px;background:var(--ink);border-bottom:1px solid var(--line)}.mobile-nav a{padding:12px 0}.hero{grid-template-columns:1fr;padding-top:45px;padding-bottom:38px;gap:33px}.hero-mark{padding:0}.hero-mark img{width:230px}.hero-copy{padding:0;gap:23px}.hero-copy h1{font-size:34px;max-width:570px}.hero-copy p{font-size:15px;margin-top:19px}.stats{padding:22px 0;gap:20px}.stats>div{flex-direction:column;gap:9px}.stats>div+div{padding:0}.stats span{font-size:13px}.section{padding-top:76px}.section-heading{flex-direction:column;gap:17px;padding-bottom:25px}.section-heading h2{font-size:30px}.section-heading p{max-width:520px}.founder-grid{grid-template-columns:1fr;gap:24px}.founder-card{grid-template-columns:140px 1fr;gap:23px;min-height:0}.founder-card>img{width:140px;height:170px}.member-grid{grid-template-columns:repeat(2,1fr);gap:27px 17px}.member-card>img{height:200px}.member-card>div{min-height:0}.logo-grid{grid-template-columns:repeat(4,1fr);gap:8px}.logo-grid-investors{grid-template-columns:repeat(3,1fr)}.logo-grid img{padding:17px;height:65px}.audience-grid{grid-template-columns:1fr;gap:10px}.audience-grid article{min-height:0;padding-bottom:20px}.audience-grid h3{font-size:23px}.benefits article{grid-template-columns:43px 1fr}.benefits article>div:last-child{padding:22px 8px}.benefits h3{font-size:19px}.benefits p{font-size:14px}.benefit-symbol{font-size:22px}.event-gallery{grid-template-columns:repeat(2,1fr);gap:8px}.calendar-head{align-items:start;flex-direction:column;gap:17px;margin-top:40px}.join-panel{align-items:start;flex-direction:column;padding:32px 0;gap:26px}.join-panel h2{font-size:37px}.join-panel p{font-size:15px}.contact-panel{align-items:start;flex-direction:column;gap:24px}.contact h2{font-size:29px}.footer{align-items:start;flex-direction:column;gap:28px;margin-top:45px}}
+@media(max-width:480px){.hero-mark img{width:195px}.hero-copy h1{font-size:29px}.hero-copy h1 br{display:none}.stats strong{font-size:29px}.section-heading h2{font-size:27px}.founder-card{grid-template-columns:115px 1fr;gap:17px}.founder-card>img{width:115px;height:150px}.founder-card h3{font-size:19px}.founder-card p{font-size:13px}.member-card>img{height:145px}.member-card h3{font-size:17px}.logo-grid,.logo-grid-investors{grid-template-columns:repeat(2,1fr)}.logo-grid img{height:63px}.join-panel h2{font-size:33px}.event-gallery img{aspect-ratio:1.16}.faq-list summary{font-size:16px}.luma-calendar{height:420px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Centered hero: logo, slogan, action. */
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px;padding-top:64px;padding-bottom:56px}
+.hero-mark{padding:0;width:min(430px,75%)}
+.hero-mark img{width:100%;max-width:none;margin:0 auto}
+.hero-copy{padding:0;align-items:center;gap:25px}
+.hero-copy h1{font-size:clamp(27px,3vw,38px);line-height:1.3;max-width:720px}
+@media(max-width:760px){.hero{padding-top:45px;padding-bottom:40px;gap:25px}.hero-mark{width:min(340px,76%)}.hero-mark img{width:100%}.hero-copy{padding:0;align-items:center}.hero-copy h1{font-size:29px}}
+@media(max-width:480px){.hero-mark{width:76%}.hero-copy h1{font-size:26px}.hero-copy h1 br{display:block}}
+
+/* Review refinements: consistent actions, resident carousel and distinct sections. */
+.header-cta,.button-light,.button-dark,.carousel-toolbar button{background:var(--red);color:#fff;border:1px solid var(--red)}
+.header-cta:hover,.carousel-toolbar button:hover{background:#c71925;border-color:#c71925}
+.hero-location{margin:18px auto 0!important;font-size:15px!important;color:var(--muted);text-align:center}
+h1{font-weight:600}.section-heading h2,.contact h2{font-weight:550}.section-heading h2 strong{font-weight:550}
+.section-heading{flex-direction:column;gap:14px;align-items:flex-start}.section-heading p{max-width:660px}
+.stats{grid-template-columns:repeat(3,1fr);gap:25px}.stats>div,.stats>div+div{padding:0;flex-direction:column;gap:10px}
+.founder-card{border-bottom:0;padding-bottom:0}.profile-link{margin-top:9px;font-size:13px;color:var(--paper);text-decoration:underline;text-underline-offset:4px;min-height:28px;display:inline-flex;align-items:center}
+.company-mark,.logo-grid img,.backer-logos img{filter:brightness(0) invert(1);background:transparent;border-radius:0;padding:0;object-fit:contain}
+.company-mark{max-width:115px;height:29px;object-position:left center}
+#members{margin-top:95px;padding:48px 40px;background:var(--surface);border-radius:8px}
+.carousel-toolbar{display:flex;justify-content:space-between;align-items:center;margin:0 0 20px;color:var(--muted);font-size:14px}.carousel-toolbar>div{display:flex;gap:8px}.carousel-toolbar button{width:44px;height:44px;border-radius:4px;font-size:20px}.carousel-toolbar button:disabled{opacity:.35;cursor:default}
+.member-grid{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:#625959 transparent;padding-bottom:20px}.member-card{flex:0 0 calc((100% - 56px)/3);min-width:0;scroll-snap-align:start}.member-card>div{padding:0;min-height:0;display:block}.member-card .resident-top{display:flex;align-items:center;gap:17px;margin-bottom:19px}.resident-photo{width:94px;height:112px;object-fit:cover;object-position:50% 10%;border-radius:4px}.resident-top .company-mark{max-width:95px;height:28px}.member-card h3{font-size:19px;margin:0}.member-card p{font-size:14px;min-height:44px;margin-top:7px}.backing{margin-top:21px!important}.backing>span{font-size:12px;color:var(--muted)}.backer-logos{display:flex;align-items:center;flex-wrap:wrap;gap:15px 19px;margin-top:12px;min-height:60px}.backer-logos img{max-width:87px;width:auto;height:23px}
+.logo-groups{grid-template-columns:1fr 1fr;gap:45px;margin-top:44px;padding-top:30px;border-top:1px solid var(--line)}.logo-groups h3{color:var(--paper);font-size:18px}.logo-grid,.logo-grid-investors{grid-template-columns:repeat(3,1fr);gap:22px 24px;align-items:center}.logo-grid img{width:100%;height:30px;max-width:112px;padding:0}
+.audience-grid{grid-template-columns:repeat(4,1fr);gap:25px;border:0}.audience-grid article{padding:26px 21px;background:var(--surface);min-height:210px;border-radius:6px}.audience-grid h3{font-size:22px}.audience-grid p{font-size:14px}
+.benefits{display:grid;grid-template-columns:1fr 1fr;gap:24px;border:0}.benefits article{display:flex;flex-direction:column;background:var(--surface);border:0;min-height:0;border-radius:7px;overflow:hidden}.benefits article>div:last-child{padding:25px 27px 29px}.benefits h3{font-size:23px}.benefits p{font-size:15px}.benefit-art{width:100%;height:215px;object-fit:cover;display:flex;align-items:center;justify-content:center;gap:12px;background:#292525;padding:25px}.benefits img.benefit-art{padding:0}.chat-art,.bot-art{flex-wrap:wrap;align-content:center}.benefit-art>span{padding:12px 16px;border:1px solid #625757;border-radius:5px;font-size:16px}.chat-art>span:first-child{background:#463332}.bot-art>span:nth-child(2){background:#3b2c2c}.place-art{flex-direction:column;gap:7px}.place-art span{border:0;padding:0;font-size:15px;color:var(--muted)}.place-art strong{font-size:34px;font-weight:550}
+.event-gallery{grid-template-columns:repeat(4,1fr)}.event-gallery figure{margin:0;position:relative;border-radius:5px;overflow:hidden;background:var(--surface)}.event-gallery img{aspect-ratio:1.2;border-radius:0}.event-gallery figcaption{font-size:14px;padding:11px 12px;background:var(--surface);font-weight:550}.photo-pending{aspect-ratio:1.2;display:flex;align-items:center;justify-content:center;padding:25px;background:#2c2929;text-align:center;color:var(--muted)}.calendar-head{flex-direction:column;align-items:center;gap:17px;text-align:center;margin:36px 0 0}.calendar-head p{font-size:16px;margin:0;color:var(--muted)}
+.join-panel{background:var(--surface);border:0;border-radius:8px;padding:55px 35px;flex-direction:column;align-items:center;text-align:center;gap:28px}.join-panel>div{display:flex;flex-direction:column;align-items:center}.join-panel h2{font-size:40px}.join-panel p{max-width:560px}.join-benefits{display:grid;grid-template-columns:1fr 1fr;gap:13px 30px;list-style:none;padding:0;margin:28px 0 0;text-align:left;font-size:15px}.join-benefits li:before{content:'✓';color:var(--paper);margin-right:10px}
+.contact-panel{border:0;background:var(--surface);border-radius:8px;padding:32px;gap:28px}.contact-portrait{width:110px;height:135px;flex:none;background:#302b2b;display:flex;align-items:center;justify-content:center;color:var(--muted);border-radius:4px}.contact-panel>div:nth-child(2){flex:1}.email-address{display:inline-block;margin-top:8px;color:var(--paper);text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+@media(max-width:1000px){.audience-grid{grid-template-columns:1fr 1fr}.member-card{flex-basis:calc((100% - 28px)/2)}.resident-top .company-mark{max-width:85px}.logo-grid,.logo-grid-investors{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){#members{margin-top:70px;padding:30px 24px}.member-card{flex-basis:80%}.logo-groups{gap:27px}.stats{gap:16px}.stats strong{font-size:29px}.stats span{font-size:12px}.benefits{gap:17px}.benefit-art{height:185px;padding:18px}.benefit-art>span{font-size:13px;padding:8px}.benefits article>div:last-child{padding:22px}.benefits h3{font-size:21px}.event-gallery{grid-template-columns:1fr 1fr}.join-panel{padding:35px 25px}.join-panel h2{font-size:34px}.contact-panel{flex-direction:row;flex-wrap:wrap}.contact-panel .button{margin-left:138px}}
+@media(max-width:480px){.stats{grid-template-columns:1fr;gap:22px}.stats>div{flex-direction:row;align-items:center;gap:14px}.stats span{font-size:13px}.member-card{flex-basis:100%}.resident-photo{width:90px;height:108px}.logo-groups{grid-template-columns:1fr;gap:32px}.logo-grid,.logo-grid-investors{grid-template-columns:repeat(3,1fr)}.logo-grid img{height:25px}.audience-grid{gap:12px}.audience-grid article{padding:20px 16px;min-height:0}.audience-grid h3{font-size:19px}.audience-grid p{font-size:13px}.benefits{grid-template-columns:1fr}.benefit-art{height:180px}.join-benefits{grid-template-columns:1fr;gap:10px;font-size:14px}.contact-panel{padding:25px;gap:20px}.contact-portrait{width:75px;height:100px}.contact-panel>div:nth-child(2){min-width:150px}.contact h2{font-size:25px}.contact-panel .button{margin-left:0}.contact p{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.member-grid{scroll-behavior:auto}}
+/* Final review adjustments. */
+.hero-copy h1{font-size:27px;line-height:1.4;font-weight:500;color:var(--paper);max-width:760px;text-wrap:balance}
+.stats{border:0}
+#founders .section-heading p{max-width:none;width:100%}
+.founder-photo-crop{width:160px;height:195px;overflow:hidden;border-radius:4px}
+.founder-photo-crop img{width:100%;height:calc(100% + 9px);max-width:none;object-fit:cover;object-position:50% 0}
+.member-card{background:#2b2727;padding:25px;border-radius:9px;display:flex;flex-direction:column;min-height:340px}
+.member-card .resident-top{justify-content:space-between;align-items:center;min-height:112px}
+.member-card .resident-info{min-height:84px}
+.member-card .backing{margin-top:auto!important;padding-top:20px}
+.backer-logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:18px 16px;min-height:65px}
+.normalized-logo{display:block;max-width:100%;overflow:visible;flex:none}
+.company-mark.normalized-logo{filter:none;background:none;padding:0;width:104px;height:28px;max-width:104px}
+.backer-logos img,.backer-logos .normalized-logo{width:100%;max-width:100px;height:26px;object-fit:contain}
+.logo-groups{border:0;gap:20px;padding-top:0;margin-top:35px}
+.logo-groups>div{background:#292525;padding:27px;border-radius:8px}
+.logo-groups h3{margin-bottom:27px}
+.logo-grid,.logo-grid-investors{gap:25px 22px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.logo-grid img,.logo-grid .normalized-logo{width:100%;max-width:105px;height:29px;object-fit:contain}
+.audience-grid article:nth-child(1){background:linear-gradient(140deg,#512b31,#2b2224)}
+.audience-grid article:nth-child(2){background:linear-gradient(140deg,#40282b,#272122)}
+.audience-grid article:nth-child(3){background:linear-gradient(140deg,#4b3032,#2c2324)}
+.audience-grid article:nth-child(4){background:linear-gradient(140deg,#38252a,#242021)}
+.audience-grid p{color:#c1b7b9}
+@media(max-width:1000px){.founder-photo-crop{width:130px;height:175px}.member-card{padding:21px}.logo-grid,.logo-grid-investors{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.hero-copy h1{font-size:24px;max-width:580px}.founder-photo-crop{width:140px;height:170px}.logo-groups>div{padding:23px}.member-card{min-height:335px}.logo-grid,.logo-grid-investors{gap:22px 15px}}
+@media(max-width:480px){.hero-copy h1{font-size:22px}.founder-photo-crop{width:115px;height:150px}.logo-grid,.logo-grid-investors{grid-template-columns:repeat(3,minmax(0,1fr))}.logo-grid img,.logo-grid .normalized-logo{height:25px}.member-card{padding:22px}.resident-top .company-mark.normalized-logo{width:100px;height:27px}}
+.founder-card>.founder-photo-crop{display:block;flex:none;padding:0}.founder-photo-crop img{display:block}
+/* Tower Red hero. */
+.hero{background:var(--red);width:100%;max-width:none;margin:0;padding:64px max(24px,calc((100vw - 1120px)/2)) 56px}
+.hero-copy h1,.hero-copy .hero-location{color:var(--paper)}
+.hero-copy .hero-location{opacity:.85}
+.hero .button{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.hero .button:hover{background:#fff;opacity:1}
+.stats{padding-top:38px}
+@media(max-width:760px){.hero{padding:46px 24px 42px}}
+
+/* Five event categories, in the approved order. */
+.event-gallery{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1000px){.event-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.event-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Companies represented by speakers at Tower events. */
+.speaker-brands{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.speaker-brand{min-height:100px;display:flex;align-items:center;justify-content:center;gap:15px;background:var(--surface);border-radius:7px;padding:24px 18px}
+.speaker-brand img{width:42px;height:38px;object-fit:contain;filter:brightness(0) invert(1)}
+.speaker-brand span{font-size:23px;font-weight:550;line-height:1.2}
+@media(max-width:760px){.speaker-brands{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.speaker-brand{min-height:90px}.speaker-brand span{font-size:20px}.speaker-brand img{width:34px;height:32px}}
+@media(max-width:480px){.speaker-brand{padding:20px 12px;gap:10px}.speaker-brand span{font-size:18px}.speaker-brand img{width:28px;height:28px}}
+/* Real community conversation in a phone, with visible topic navigation. */
+.benefits .telegram-feature{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;min-height:610px;background:radial-gradient(ellipse at 95% 15%,rgba(230,30,43,.15),transparent 62%),radial-gradient(ellipse at 5% 100%,rgba(120,125,146,.09),transparent 65%),linear-gradient(125deg,#252528,#19191c);overflow:hidden}
+.benefits .telegram-feature>.telegram-copy{padding:52px 30px 45px 45px;display:flex;flex-direction:column;justify-content:center}
+.telegram-feature .telegram-copy h3{font-size:32px;font-weight:550;line-height:1.2}
+.telegram-feature .telegram-copy p{font-size:16px;max-width:390px;margin-top:19px}
+.telegram-topics{display:flex;flex-wrap:wrap;gap:12px 10px;list-style:none;margin:30px 0 0;padding:0;max-width:420px}
+.telegram-topics li{display:flex;align-items:center;gap:9px;background:#ffffff08;border:1px solid #ffffff14;padding:9px 12px;border-radius:9px;font-size:14px;color:var(--paper)}
+.topic-icon{width:27px;height:27px;display:flex;align-items:center;justify-content:center;flex:none;border-radius:50% 50% 50% 4px;font-size:14px;font-weight:600;color:white}
+.topic-general,.topic-ai{background:#328bd1}.topic-events,.topic-memes{background:#38a943}.topic-jobs{background:#e6493d}.topic-intro{background:#a251bb}.topic-fundraising{background:#e25587}.topic-ai{font-size:11px}
+.benefits .telegram-feature>.telegram-visual{padding:35px 24px 0;display:flex;align-items:flex-end;justify-content:center;overflow:hidden}
+.iphone-frame{width:306px;flex:none;padding:8px;background:#080808;border:2px solid #8d8885;border-radius:44px 44px 0 0;box-shadow:0 0 0 3px #141414,0 20px 45px #0005;position:relative}
+.iphone-screen{border-radius:34px 34px 0 0;overflow:hidden;background:#eeeef2;position:relative;color:#171515}
+.iphone-status{height:43px;display:flex;align-items:center;justify-content:space-between;padding:0 21px;font:600 12px/1 Aspekta,Arial,sans-serif;position:relative;background:#f9f9fb}
+.dynamic-island{position:absolute;top:9px;left:50%;transform:translateX(-50%);width:84px;height:24px;border-radius:20px;background:#080808}
+.telegram-phone-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px 13px;background:#f9f9fb;border-bottom:1px solid #d8d8df}
+.telegram-phone-header>span{font-size:31px;color:#2c8bd1;line-height:1}.telegram-phone-header>div:nth-child(2){text-align:center;display:flex;flex-direction:column;gap:1px}.telegram-phone-header strong{font-size:15px;font-weight:550}.telegram-phone-header>div>span{font-size:12px;color:#76767e}.phone-avatar{width:32px;height:32px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;padding:4px}.phone-avatar img{width:100%}
+.telegram-message-viewport{height:462px;overflow:hidden;background:#eeeef2;padding-top:10px}
+.telegram-message-viewport>img{display:block;width:229.14%;max-width:none;height:auto;margin-left:-78.57%;margin-top:-34.28%}
+.iphone-home{height:4px;width:90px;border-radius:3px;background:#171515;position:absolute;bottom:8px;left:50%;transform:translateX(-50%)}
+@media(max-width:1000px){.benefits .telegram-feature>.telegram-copy{padding:35px 23px}.telegram-feature .telegram-copy h3{font-size:28px}.iphone-frame{width:280px}.telegram-message-viewport{height:425px}.telegram-topics{gap:8px}.telegram-topics li{padding:7px 9px;font-size:13px}}
+@media(max-width:760px){.benefits .telegram-feature{grid-template-columns:1fr;min-height:0}.benefits .telegram-feature>.telegram-copy{padding:30px 27px 10px}.telegram-feature .telegram-copy h3{font-size:27px}.telegram-feature .telegram-copy p{font-size:15px;max-width:520px}.telegram-topics{max-width:520px;margin-top:23px}.benefits .telegram-feature>.telegram-visual{padding:28px 20px 0}.iphone-frame{width:306px}.telegram-message-viewport{height:462px}}
+@media(max-width:380px){.iphone-frame{width:270px}.telegram-message-viewport{height:410px}}
+
+.benefits img.building-photo{height:auto;aspect-ratio:2048/1362;object-fit:cover;padding:0}
+
+/* Angled titanium phone with a complete rounded silhouette. */
+.benefits .telegram-feature>.telegram-visual{perspective:1200px;padding:48px 32px 45px;align-items:center;overflow:visible}
+.iphone-frame{border-radius:48px;padding:9px;border:1px solid #aaa7a2;background:linear-gradient(115deg,#d5d1ca 0%,#696864 8%,#171819 20%,#080909 70%,#898780 98%);transform:rotateY(-17deg) rotateX(5deg) rotateZ(5deg);box-shadow:1px 0 0 #efebe1,3px 1px 0 #8b8983,6px 2px 0 #424340,9px 3px 0 #202220,12px 4px 0 #555651,17px 15px 24px #0006,30px 35px 60px #0008;isolation:isolate}
+.iphone-frame::before{content:"";position:absolute;left:-4px;top:115px;width:3px;height:37px;border-radius:3px;background:linear-gradient(90deg,#565752,#c6c2b9,#5b5c56);box-shadow:0 48px 0 #8e8e86,0 -49px 0 -1px #a9a69e}
+.iphone-frame::after{content:"";position:absolute;right:-10px;top:155px;width:4px;height:62px;border-radius:3px;background:linear-gradient(90deg,#252623,#9c9b92,#43443e);transform:skewY(12deg)}
+.iphone-screen{border:3px solid #080909;border-radius:39px;box-shadow:0 0 0 1px #292a28;background:#eeeef2;padding-bottom:17px}
+.dynamic-island{width:88px;height:25px;box-shadow:inset 0 0 2px #282828}
+.dynamic-island::after{content:"";position:absolute;right:9px;top:8px;width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#223a59,#0d1320 45%,#030408 75%);box-shadow:0 0 0 2px #111}
+.iphone-status>span:last-child{font-size:0;width:19px;height:9px;border:1px solid #252525;border-radius:3px;position:relative;background:linear-gradient(90deg,#252525 80%,transparent 80%);background-clip:content-box;padding:1px}
+.iphone-status>span:last-child::after{content:"";position:absolute;right:-3px;top:2px;width:2px;height:3px;border-radius:0 1px 1px 0;background:#252525}
+@media(max-width:760px){.benefits .telegram-feature>.telegram-visual{padding:35px 30px 42px}.iphone-frame{transform:rotateY(-12deg) rotateX(3deg) rotateZ(3deg)}}
+
+.telegram-details{margin-top:23px;color:var(--muted);font-size:16px;line-height:1.65}.telegram-details h4{font-size:17px;font-weight:550;color:var(--text,#f9fbff);margin:0 0 9px}.telegram-details ul{margin:0;padding-left:19px}.telegram-feature .telegram-details p{margin:14px 0 0;color:var(--text,#f9fbff);font-weight:550;font-size:16px}
+
+.telegram-feature .telegram-details p.telegram-intro{font-weight:500;color:var(--muted);margin:0 0 17px;max-width:410px}.telegram-details a{color:inherit;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(249,251,255,.35)}.telegram-details a:hover{text-decoration-color:currentColor}
+
+#founders{padding-top:48px}.founder-card{background:#262323;border-radius:9px;padding:22px;gap:20px;grid-template-columns:140px minmax(0,1fr)}.founder-card>img,.founder-card>.founder-photo-crop{width:140px;height:180px}.founder-card>div{min-width:0}.founder-card .company-mark[aria-label="Unreal Labs"]{width:28px;max-width:28px;height:30px}
+@media(max-width:1000px) and (min-width:761px){.founder-card{grid-template-columns:110px minmax(0,1fr);padding:18px;gap:16px}.founder-card>img,.founder-card>.founder-photo-crop{width:110px;height:160px}}
+@media(max-width:480px){#founders{padding-top:32px}.founder-card{padding:18px;grid-template-columns:95px minmax(0,1fr);gap:16px}.founder-card>img,.founder-card>.founder-photo-crop{width:95px;height:145px}}
+
+/* Compact residents: natural card height and cropped portrait edges. */
+#resident-track{align-items:flex-start;gap:20px}
+#resident-track .member-card{flex:0 0 calc((100% - 40px)/3);min-height:0;padding:20px;display:flex;flex-direction:column}
+#resident-track .resident-top{flex-direction:row;justify-content:space-between;min-height:0;margin-bottom:16px;gap:16px}
+.resident-photo-crop{width:76px;height:88px;overflow:hidden;border-radius:4px;flex:none}
+#resident-track .resident-photo{display:block;width:76px;height:97px;max-width:none;object-fit:cover;object-position:center top;border-radius:0}
+#resident-track .resident-info{min-height:0}
+#resident-track .member-card h3{font-size:18px}
+#resident-track .member-card p{min-height:0;font-size:13px;line-height:1.5;margin-top:6px}
+#resident-track .backing{margin-top:18px!important;padding-top:0;min-height:0}
+#resident-track .backer-logos{min-height:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px;margin-top:10px}
+#resident-track .backer-logos img,#resident-track .backer-logos .normalized-logo{width:100%;max-width:96px;height:24px;object-fit:contain}
+#resident-track .company-mark{width:96px;max-width:96px;height:27px}
+#resident-track .backer-logos img[alt="Trinity Capital"]{grid-column:1/-1;max-width:154px;height:15px;order:1;justify-self:start}
+@media(max-width:760px){#resident-track .member-card{flex-basis:78%;max-width:320px}}
+@media(max-width:480px){#resident-track .member-card{flex-basis:100%;max-width:none}}
+
+#resident-track .more-members{min-height:280px;justify-content:center;background:linear-gradient(140deg,#54272e,#302326)}.more-members>span{font-size:18px;color:var(--muted)}.more-members>strong{font-size:64px;font-weight:550;line-height:1.1;margin:10px 0}.more-members .profile-link{margin-top:22px}
+#who{margin-top:76px;padding:48px 40px;background:#edf0f4;color:#171515;border-radius:9px}#who .section-heading p{color:#56575e}#who .audience-grid{gap:18px}#who .audience-grid article{background:#fff;min-height:180px;padding:24px 21px}#who .audience-grid h3{color:#171515}#who .audience-grid p{color:#56575e}
+.benefits img.events-feature-photo{height:auto;aspect-ratio:1280/851;object-fit:cover;padding:0}
+.telegram-message-viewport.welcome-chat{padding:15px 10px 24px;height:462px;overflow:auto;background:linear-gradient(150deg,#e6e9ef,#eee8e6)}.welcome-bubble{padding:13px 12px;background:#fff;border-radius:14px 14px 14px 3px;box-shadow:0 1px 2px #0000000a}.welcome-bubble>strong{font-size:13px;color:#d66a16;font-weight:550}.telegram-feature .welcome-bubble p{font:500 13px/1.45 Aspekta,Arial,sans-serif;color:#171515;margin:11px 0 0;max-width:none}
+@media(max-width:760px){#who{padding:30px 24px;margin-top:55px}#who .audience-grid article{min-height:0}.telegram-message-viewport.welcome-chat{height:462px}}
+@media(max-width:380px){.telegram-message-viewport.welcome-chat{height:440px}.telegram-feature .welcome-bubble p{font-size:12px}}
+
+#events .event-mosaic{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:260px;grid-auto-flow:dense;gap:16px}
+#events .mosaic-tile{position:relative;margin:0;min-width:0;overflow:hidden;border-radius:8px;background:#282628}
+#events .mosaic-tile.wide{grid-column:span 2}#events .mosaic-tile.tall{grid-row:span 2}
+#events .mosaic-tile img{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;display:block}
+#events .mosaic-tile.tall img{object-position:50% 66%}
+#events .mosaic-tile figcaption{position:absolute;inset:auto 0 0;padding:48px 23px 22px;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;font-size:24px;font-weight:550}
+#events .photo-placeholder{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#35292d,#222327);color:#a3999d;text-align:center;font-size:18px;line-height:1.4}
+@media(min-width:1400px){#events .event-mosaic{grid-auto-rows:290px}}
+@media(max-width:760px){#events .event-mosaic{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:220px;gap:12px}#events .mosaic-tile figcaption{font-size:20px;padding:40px 17px 17px}}
+@media(max-width:480px){#events .event-mosaic{grid-auto-rows:180px;gap:10px}#events .mosaic-tile figcaption{font-size:17px;padding:32px 13px 13px}#events .photo-placeholder{font-size:15px}}
+
+.contact-portrait{height:auto;aspect-ratio:1;overflow:hidden}.contact-portrait img{display:block;width:100%;height:100%;object-fit:cover}
+
+
+
+.footer-socials{display:flex;align-items:center;gap:16px}.footer-socials>span{font-size:14px;color:var(--muted)}.footer-socials nav{gap:8px}.footer-socials a{display:flex;align-items:center;justify-content:center;width:44px;height:44px;color:var(--paper);border-radius:6px}.footer-socials a:hover{background:#ffffff12}.footer-socials svg{width:24px;height:24px}.footer-socials a:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+
+.speaker-brand img.speaker-wordmark{width:156px;max-width:100%;height:36px;object-fit:contain;filter:none}.speaker-brand img.miro-wordmark{width:137px;height:50px}.speaker-brand img.alibaba-wordmark{width:166px}.speaker-brand img.openai-wordmark{width:138px}@media(max-width:480px){.speaker-brand{padding:20px 16px}.speaker-brand img.speaker-wordmark{max-width:100%;height:30px}.speaker-brand img.miro-wordmark{height:42px}}
+
+.stats>div,.stats>div+div{align-items:center;text-align:center;justify-content:center}
+#resident-track .backer-logos{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:16px 22px;min-height:56px}
+#resident-track .backer-logos img,#resident-track .backer-logos .normalized-logo{width:84px;max-width:84px;height:22px;flex:0 0 84px;object-fit:contain}
+#resident-track .backer-logos img[alt="Trinity Capital"]{width:124px;max-width:124px;flex-basis:124px;height:16px;order:0}
+#resident-track .backer-logos img[alt="Begin Capital"]{width:74px;max-width:74px;flex-basis:74px;height:21px}
+#resident-track .resident-top{justify-content:flex-start;gap:22px}#resident-track .company-mark{width:90px;max-width:90px;height:25px}
+.footer{align-items:end}.footer>div:first-child p{height:44px;display:flex;align-items:center;margin-top:8px;line-height:20px}.footer>nav{height:44px;align-items:center}.footer-socials{height:44px}.footer-socials>span{font-size:13px;line-height:20px}
+@media(max-width:760px){.footer{align-items:flex-start}.stats>div{flex-direction:column}}
+
+/* Section palette: distinct fields across the long page. */
+:root{--graphite:#28282c;--cool-surface:#e8edf3;--light-muted:#575b63}
+.stats{background:var(--paper);color:var(--ink);width:100%;padding:38px max(32px,calc((100vw - 1120px)/2)) 36px;gap:25px}.stats span{color:var(--light-muted)}
+#founders{background:var(--paper);color:var(--ink);width:100%;padding:40px max(32px,calc((100vw - 1120px)/2)) 58px}#founders .section-heading p{color:var(--light-muted)}#founders .founder-card{background:#e9ecf0}#founders .founder-card p{color:var(--light-muted)}#founders .profile-link{color:var(--ink)}#founders .company-mark.normalized-logo{filter:brightness(0)}
+#members{background:var(--graphite);margin-top:64px}#resident-track .member-card{background:#35353a}#members .logo-groups>div{background:#303035}
+#who{background:var(--soft);margin-top:64px}#who .audience-grid article{background:rgba(255,255,255,.7)}
+#inside .telegram-feature{background:var(--cool-surface);color:var(--ink)}#inside .telegram-copy h3,#inside .telegram-details h4,#inside .telegram-details p{color:var(--ink)}#inside .telegram-details,#inside .telegram-details li{color:var(--light-muted)}#inside .telegram-topics li{background:#f9fbff;border-color:#d1d7df;color:var(--ink)}#inside .telegram-details a{text-decoration-color:#8d939c}
+#inside .benefits>article:not(.telegram-feature){background:#e4e7eb;color:var(--ink)}#inside .benefits>article:not(.telegram-feature) p{color:var(--light-muted)}
+#speakers{padding-top:72px;padding-bottom:64px}
+#events{width:100%;padding:58px max(32px,calc((100vw - 1120px)/2));background:var(--paper);color:var(--ink)}#events .section-heading p,#events .calendar-head p{color:var(--light-muted)}#events .calendar-head .button{background:var(--red);color:#fff}
+#join{padding-top:64px}.join-panel{background:var(--red);color:#fff}.join-panel h2,.join-panel h2 .quiet,.join-panel p,.join-benefits{color:#fff}.join-panel .button{background:var(--paper);color:var(--ink)}
+.contact-panel{background:var(--soft);color:var(--ink)}.contact-panel p{color:var(--light-muted)}.contact-panel .email-address{color:var(--ink)}
+#who :focus-visible,#inside :focus-visible,#events :focus-visible,#founders :focus-visible,#contact :focus-visible{outline-color:var(--ink)}
+@media(max-width:760px){.stats{padding:28px 20px}#founders{padding:32px 20px 40px}#members{margin-top:40px}#who{margin-top:40px}#events{padding:38px 20px}#speakers{padding-top:48px;padding-bottom:40px}#join{padding-top:40px}}
+
+#resident-track .company-mark[src="assets/logos/fira-white.svg"]{filter:none;width:31px;height:31px;max-width:31px}#resident-track .company-mark[aria-label="Rork"]{width:96px;max-width:96px;height:25px}
+
+/* Predominantly dark, with restrained section accents. */
+.stats{background:var(--ink);color:var(--paper)}.stats span{color:#aaa6a6}
+#founders{background:var(--ink);color:var(--paper)}#founders .section-heading p,#founders .founder-card p{color:#b7b3b3}#founders .founder-card{background:#242223}#founders .profile-link{color:var(--paper)}#founders .company-mark.normalized-logo{filter:none}
+#members{background:#222225}#resident-track .member-card{background:#2d2d31}#members .logo-groups>div{background:#29292d}
+#who{background:#292326;color:var(--paper)}#who .section-heading p{color:#c0b6bb}#who .audience-grid article{background:#332c30}#who .audience-grid h3{color:var(--paper)}#who .audience-grid p{color:#c0b6bb}
+#inside .telegram-feature{background:radial-gradient(ellipse at 95% 10%,rgba(230,30,43,.10),transparent 62%),linear-gradient(125deg,#272a30,#202126);color:var(--paper)}#inside .telegram-copy h3,#inside .telegram-details h4,#inside .telegram-details p{color:var(--paper)}#inside .telegram-details,#inside .telegram-details li{color:#b9bac0}#inside .telegram-topics li{background:#303238;border-color:#41434a;color:var(--paper)}#inside .telegram-details a{text-decoration-color:#777b83}
+#inside .benefits>article:not(.telegram-feature){background:#252528;color:var(--paper)}#inside .benefits>article:not(.telegram-feature) p{color:#b9bac0}
+#events{background:#202022;color:var(--paper)}#events .section-heading p,#events .calendar-head p{color:#b9b6ba}
+.join-panel{background:linear-gradient(115deg,#3a2429,#282125);color:var(--paper)}.join-panel .button{background:var(--red);color:#fff}
+.contact-panel{background:#272529;color:var(--paper)}.contact-panel p{color:#b9b6ba}.contact-panel .email-address{color:var(--paper)}
+#who :focus-visible,#inside :focus-visible,#events :focus-visible,#founders :focus-visible,#contact :focus-visible{outline-color:var(--paper)}
+
+.hero-copy>div{width:100%;display:flex;flex-direction:column;align-items:center;text-align:center}.hero-copy .hero-location{width:100%;max-width:none}.hero-copy>.button{align-self:center}
+
+#resident-track .member-card.more-members{background:var(--red);color:#fff}#resident-track .more-members>span,#resident-track .more-members p,#resident-track .more-members h3,#resident-track .more-members .profile-link{color:#fff}
+
+.telegram-feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}.subchat-board{grid-column:1/-1;padding:20px;background:#303137;border-radius:8px}.subchat-board h4{font-size:16px;font-weight:550;margin:0 0 17px;color:var(--paper)}.subchat-tiles{display:grid;grid-template-columns:1fr 1fr;gap:19px 14px}.subchat-tile{display:flex;align-items:flex-start;gap:10px;min-width:0}.subchat-tile .topic-icon{flex:none;width:30px;height:30px;font-size:14px}.subchat-tile>div{display:flex;flex-direction:column;gap:4px}.subchat-tile strong{font-size:14px;line-height:1.2;font-weight:550;color:var(--paper)}.subchat-tile>div>span{font-size:12px;line-height:1.35;color:#bfc0c6}.telegram-extra{padding:19px 18px;display:flex;flex-direction:column;align-items:flex-start;gap:8px;border-radius:8px;background:#303137;color:var(--paper)}.coffee-extra{background:#493039}.telegram-extra svg{width:30px;height:30px;margin-bottom:8px}.telegram-extra strong{font-size:16px;font-weight:550;line-height:1.2}.telegram-extra>span{font-size:12px;color:#d0c8cc;line-height:1.4}.coffee-extra b{margin-left:8px}.members-extra{background:#2e3741}
+@media(max-width:1000px) and (min-width:761px){.subchat-board{padding:16px}.subchat-tiles{gap:16px 10px}.subchat-tile{gap:7px}.subchat-tile strong{font-size:13px}.subchat-tile>div>span{font-size:11px}}
+@media(max-width:380px){.subchat-tiles{grid-template-columns:1fr}.telegram-extra{padding:16px 12px}.telegram-extra strong{font-size:14px}}
+
+.join-panel .application-note{font-size:13px;line-height:1.6;color:#c7bdc0;max-width:560px;margin:0;text-align:center}.application-note a{text-decoration:underline;text-underline-offset:3px;color:var(--paper)}
+
+/* Compact, neutral feature group and straight Telegram phone. */
+.carousel-toolbar{justify-content:flex-end;margin-bottom:16px}
+#who{background:#242426}#who .audience-grid article{background:#303033}#who .section-heading p,#who .audience-grid p{color:#bcbcc1}
+#inside .benefits{gap:18px}#inside .telegram-feature{background:#252527;min-height:0;grid-template-columns:1.15fr .85fr}
+#inside .telegram-feature>.telegram-copy{padding:28px 30px;justify-content:center}#inside .telegram-copy h3{font-size:26px;line-height:1.2}
+.telegram-feature-grid{margin-top:20px;gap:10px}.subchat-board{padding:16px;background:#313134}.subchat-board h4{margin-bottom:13px}.subchat-tiles{gap:14px 12px}.telegram-extra{padding:13px 16px;gap:5px;background:#343437}.telegram-extra svg{width:24px;height:24px;margin-bottom:4px}.telegram-extra strong{font-size:14px}.telegram-extra>span{font-size:12px}
+#inside .telegram-feature>.telegram-visual{padding:22px 20px;perspective:none;align-items:center}
+#inside .iphone-frame{width:254px;transform:none;border-radius:38px;padding:6px;background:#171719;border:1px solid #85858a;box-shadow:0 0 0 2px #080809,0 12px 25px #0004}
+#inside .iphone-frame::before,#inside .iphone-frame::after{display:none}#inside .iphone-screen{border-radius:30px;padding-bottom:19px}#inside .iphone-status{height:36px;padding:0 17px;font-size:10px}#inside .dynamic-island{height:20px;width:72px;top:7px}#inside .dynamic-island::after{top:6px;width:7px;height:7px}
+#inside .telegram-phone-header{padding:5px 10px 8px}#inside .telegram-phone-header strong{font-size:13px}#inside .telegram-phone-header>div>span{font-size:10px}#inside .phone-avatar{width:27px;height:27px}
+.telegram-pinned{display:flex;flex-direction:column;background:#f9f9fb;border-left:3px solid #3390ec;padding:5px 10px;margin:0;font:500 10px/1.3 Aspekta,Arial,sans-serif;color:#454545}.telegram-pinned strong{color:#2481cc;font-weight:550}
+#inside .telegram-message-viewport.welcome-chat{height:294px;padding:9px 8px 12px;background:#dce4dc;overflow:auto}#inside .welcome-bubble{padding:9px 10px;border-radius:12px 12px 12px 3px;box-shadow:0 1px 1px #0002}#inside .welcome-bubble>strong{font-size:11px}#inside .welcome-bubble p{font-size:10.5px;line-height:1.4;margin-top:8px}
+.telegram-compose{display:flex;align-items:center;gap:8px;padding:6px 9px;background:#f5f5f7;color:#2481cc;font-size:20px;line-height:1}.telegram-compose>div{flex:1;border:1px solid #ddd;border-radius:15px;padding:6px 9px;color:#96969c;font-size:11px;display:flex;justify-content:space-between;background:white}.telegram-compose>div>span{color:#96969c}#inside .iphone-home{width:75px;height:3px;bottom:7px}
+#inside .benefits>article:not(.telegram-feature){display:grid;grid-template-columns:44% 56%;align-items:stretch;min-height:180px}#inside .benefits>article:not(.telegram-feature) img.benefit-art{height:100%;min-height:180px;aspect-ratio:auto;object-fit:cover}#inside .benefits>article:not(.telegram-feature)>div{padding:22px;display:flex;flex-direction:column;justify-content:center}#inside .benefits>article:not(.telegram-feature) h3{font-size:21px}#inside .benefits>article:not(.telegram-feature) p{font-size:13px;margin-top:10px}
+#join .join-panel{background:var(--red);padding:42px 30px;gap:24px}#join .join-wordmark{width:180px;height:auto}#join .join-panel h2{font-size:36px}#join .join-panel .button{background:var(--paper);color:var(--ink)}#join .application-note{color:#fff}#join .application-note a{color:#fff}
+@media(max-width:760px){#inside .telegram-feature{grid-template-columns:1fr}#inside .telegram-feature>.telegram-copy{padding:26px}#inside .telegram-feature>.telegram-visual{padding-top:0}#inside .benefits>article:not(.telegram-feature){grid-template-columns:1fr}#inside .benefits>article:not(.telegram-feature) img.benefit-art{height:180px}#inside .telegram-copy h3{font-size:25px}#join .join-wordmark{width:145px}}
+
+/* Tighter spacing around the resident carousel. */
+#members{margin-top:32px;padding-top:32px;padding-bottom:32px}
+#members .section-heading{margin-bottom:18px}
+#members .carousel-toolbar{margin-bottom:12px}
+#resident-track{padding-bottom:10px;box-sizing:border-box;overflow-y:hidden}
+#members .logo-groups{margin-top:24px}
+@media(max-width:760px){#members{margin-top:24px;padding-top:24px;padding-bottom:24px}#members .logo-groups{margin-top:20px}}
+
+/* Original Tower T, Figma Guide / 84 / Union (3:76). */
+#inside .telegram-feature{background:radial-gradient(ellipse at 95% 10%,rgba(230,30,43,.13),transparent 62%),linear-gradient(125deg,#272a30,#202126)}
+#join .join-panel{display:grid;grid-template-columns:38% 62%;gap:0;padding:48px 64px;text-align:left;align-items:center}
+#join .join-symbol{display:flex;align-items:center;justify-content:center;padding-right:48px}
+#join .join-symbol img{display:block;height:340px;width:auto;max-width:100%;object-fit:contain}
+#join .join-content{display:flex;flex-direction:column;align-items:flex-start;gap:24px;min-width:0}
+#join .join-content h2{font-size:42px;line-height:1.12;text-align:left}
+#join .join-content p{margin-left:0;margin-right:0;text-align:left;max-width:480px}
+#join .join-content .application-note{font-size:12px;line-height:1.6}
+@media(max-width:760px){#join .join-panel{grid-template-columns:24% 76%;padding:32px 24px;align-items:start}#join .join-symbol{padding-right:22px;padding-top:5px}#join .join-symbol img{height:auto;width:100%;max-width:90px}#join .join-content h2{font-size:29px}#join .join-content{gap:20px}#join .join-content p{font-size:14px}#join .join-content .application-note{font-size:12px;overflow-wrap:anywhere}}
+
+/* Restrained interaction motion, only for users who allow it. */
+@media(prefers-reduced-motion:no-preference){
+ .button,.header-cta{transition:background-color .2s ease,box-shadow .2s ease,transform .2s ease}
+ .button>span,.header-cta>span{display:inline-block;transition:transform .2s ease}
+ .carousel-toolbar button{transition:background-color .2s ease,opacity .2s ease}
+ .profile-link,.footer a{transition:opacity .2s ease}
+ @media(hover:hover) and (pointer:fine){
+  .button:hover,.header-cta:hover{transform:translateY(-2px);box-shadow:0 5px 14px #0002}
+  .button:hover>span,.header-cta:hover>span{transform:translate(2px,-2px)}
+  .button:active,.header-cta:active{transform:translateY(0);box-shadow:none}
+  .profile-link:hover,.footer a:hover{opacity:.75}
+  .founder-card,.member-card,.speaker-brand{transition:box-shadow .25s ease}
+  .founder-card:hover,.member-card:hover,.speaker-brand:hover{box-shadow:inset 0 0 0 1px #ffffff24}
+ }
+}
+
+/* Tower's original additional graphics: accents tied to each section. */
+.tower-symbol{pointer-events:none;object-fit:contain;flex-shrink:0}
+#resident-track .more-members{position:relative}
+#resident-track .more-members .community-star{position:absolute;right:22px;top:22px;width:54px;height:54px}
+#inside .symbol-heading{display:flex;align-items:center;gap:12px}
+#inside .feature-symbol{width:34px;height:34px}
+#inside .feature-symbol[src$="pin.svg"]{width:26px}
+#who{position:relative}
+#who .audience-symbol{position:absolute;right:40px;top:46px;width:158px;height:42px}
+#who .section-heading{padding-right:185px}
+#join .join-symbol{flex-direction:column;gap:24px}
+#join .join-symbol>img:not(.join-steps){height:285px}
+#join .join-symbol .join-steps{width:165px;height:auto;max-width:100%}
+@media(max-width:760px){
+ #who .audience-symbol{right:24px;top:26px;width:85px;height:25px}
+ #who .section-heading{padding-right:100px}
+ #join .join-symbol>img:not(.join-steps){height:auto}
+ #join .join-symbol .join-steps{width:90px;height:auto}
+ #join .join-symbol{gap:16px}
+ #inside .feature-symbol{width:30px;height:30px}
+}
+
+/* Give the hero symbol and small corner accent distinct space. */
+#join .join-panel{position:relative;padding:52px 64px 88px;grid-template-columns:34% 66%;align-items:center}
+#join .join-symbol{padding-right:48px;gap:0}
+#join .join-symbol>img:not(.join-steps){height:250px;width:auto}
+#join .join-panel>.join-steps{position:absolute;right:36px;bottom:28px;width:76px;height:auto;max-width:none}
+@media(max-width:760px){
+ #join .join-panel{grid-template-columns:22% 78%;padding:32px 24px 70px}
+ #join .join-symbol{padding-right:20px;align-self:start;padding-top:5px}
+ #join .join-symbol>img:not(.join-steps){height:auto;width:100%;max-width:70px}
+ #join .join-panel>.join-steps{width:58px;right:24px;bottom:24px}
+}
+
+/* Consistent original brand marks for the two community features. */
+#who .section-heading{padding-right:0}
+#inside .telegram-extra .telegram-brand-symbol{width:28px;height:28px;object-fit:contain;margin-bottom:6px;flex-shrink:0}
+
+#join .join-panel{padding-bottom:52px}
+@media(max-width:760px){#join .join-panel{padding-bottom:32px}}
+
+/* Warm audience accents and a soft, localized light behind the phone. */
+#who .audience-grid article{border-top:3px solid #e61e2b;background:#302c2e}
+#who .audience-grid article:nth-child(1){background:linear-gradient(145deg,#573039,#34292e);border-top-color:#e61e2b}
+#who .audience-grid article:nth-child(2){background:linear-gradient(145deg,#403036,#302b30);border-top-color:#e97983}
+#who .audience-grid article:nth-child(3){background:linear-gradient(145deg,#333440,#2c2d34);border-top-color:#b0a2b7}
+#who .audience-grid article:nth-child(4){background:linear-gradient(145deg,#403633,#302d2c);border-top-color:#d4aaa0}
+#who .audience-grid p{color:#d0c9cd}
+#inside .telegram-feature>.telegram-visual{position:relative;isolation:isolate}
+#inside .telegram-visual::before{content:"";position:absolute;z-index:0;pointer-events:none;left:50%;top:50%;width:440px;height:520px;max-width:125%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(230,30,43,.32) 0%,rgba(230,30,43,.19) 32%,rgba(230,30,43,.07) 52%,rgba(230,30,43,0) 73%)}
+#inside .telegram-visual .iphone-frame{z-index:1}
+@media(max-width:760px){#inside .telegram-visual::before{max-width:100%;width:390px;height:500px}}
+
+/* Gentle ambient light; the phone and its text stay still. */
+@keyframes tower-phone-glow{
+  0%,100%{opacity:.72;transform:translate(-50%,-50%) scale(.97)}
+  50%{opacity:1;transform:translate(-48%,-51%) scale(1.035)}
+}
+@media(prefers-reduced-motion:no-preference){
+ #inside .telegram-visual::before{animation:tower-phone-glow 9s ease-in-out infinite}
+}
+@media(prefers-reduced-motion:reduce){
+ #inside .telegram-visual::before{animation:none}
+}
+
+@media(prefers-reduced-motion:no-preference){
+ #resident-track{transition:height .32s cubic-bezier(.22,1,.36,1)}
+ .faq-list summary::after{transition:transform .28s ease}
+ .faq-list details[open] summary::after{content:'+';transform:rotate(45deg)}
+ @media(hover:hover) and (pointer:fine){
+  .audience-grid article,.telegram-extra{transition:transform .25s ease,box-shadow .25s ease}
+  .audience-grid article:hover,.telegram-extra:hover{transform:translateY(-3px);box-shadow:0 8px 22px #0002}
+ }
+}
+
+/* Pre-launch responsive and accessibility corrections. */
+#resident-track{align-items:stretch;height:auto;transition:none;scroll-padding-inline:0}
+#resident-track .member-card{height:auto}
+#resident-track .resident-top .company-mark{flex-shrink:1;min-width:0}
+#who .audience-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.founder-grid,.benefits,.logo-groups,.audience-grid{min-width:0}
+.founder-grid>*,.benefits>*,.audience-grid>*,.logo-groups>*{min-width:0}
+.desktop-nav a{display:inline-flex;align-items:center;min-height:44px}
+.profile-link{min-height:44px}
+#inside .iphone-frame{max-width:100%}
+#inside .telegram-copy,#inside .telegram-visual{min-width:0}
+@media(min-width:761px) and (max-width:1100px){
+ #resident-track .member-card{flex-basis:calc((100% - 20px)/2)}
+ #inside .benefits>article:not(.telegram-feature){grid-template-columns:1fr}
+ #inside .benefits>article:not(.telegram-feature) img.benefit-art{height:200px}
+ #who .audience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(min-width:761px) and (max-width:900px){
+ .site-header{gap:16px;padding-inline:24px}.desktop-nav{gap:12px}.desktop-nav a{font-size:13px}
+ .founder-grid{grid-template-columns:1fr}
+ #inside .telegram-feature{grid-template-columns:1fr}
+ #inside .telegram-feature>.telegram-copy{padding:30px}
+ #inside .telegram-feature>.telegram-visual{padding-top:0}
+}
+@media(max-width:760px){
+ #who .audience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #inside .telegram-feature>.telegram-copy{padding:24px 20px}
+ #inside .telegram-feature>.telegram-visual{padding-inline:12px}
+}
+@media(max-width:520px){
+ #who .audience-grid{grid-template-columns:1fr}
+ #who .audience-grid article{padding:22px}
+ #join .join-panel{grid-template-columns:1fr;gap:24px;padding:28px 24px}
+ #join .join-symbol{padding:0;align-items:flex-start}
+ #join .join-symbol>img:not(.join-steps){height:84px;width:auto}
+ #join .join-content h2{font-size:30px}
+ .contact-panel{flex-direction:column;align-items:flex-start}
+ .contact-panel>div:nth-child(2){min-width:0;width:100%}
+ .subchat-tiles{grid-template-columns:1fr}
+ #inside .telegram-feature-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+ #resident-track .resident-top{gap:16px}
+}
+@media(max-width:380px){
+ #members{padding-inline:16px}
+ #resident-track .member-card{padding:18px}
+ .logo-grid,.logo-grid-investors{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .founder-card{grid-template-columns:80px minmax(0,1fr);padding:16px;gap:14px}
+ .founder-card>img,.founder-card>.founder-photo-crop{width:80px;height:120px}
+ .founder-card h3{font-size:18px}
+}
+@media print{
+ .site-header,.mobile-nav,.carousel-toolbar{display:none!important}
+ #resident-track{overflow:visible;flex-wrap:wrap}
+ #resident-track .member-card{flex-basis:45%}
+ #inside .telegram-visual::before{animation:none}
+}
+/* Intrinsic image dimensions reserve space without distorting scaled logos. */
+img{height:auto}
+.hero-copy .hero-location{color:#fff;opacity:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}}
