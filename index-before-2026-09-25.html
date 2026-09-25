@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower – Where London's Best Founders Launch, Grow, and Stay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23e61d2b' width='32' height='32' rx='4'/><text x='16' y='24' text-anchor='middle' font-size='22' font-weight='bold' fill='white' font-family='serif'>T</text></svg>">
+  <meta name="description" content="Tower is a startup hub in Holborn, London. 700+ members, $500M+ raised collectively. Where outlier founders launch, grow, and stay.">
+  <meta property="og:title" content="Tower – Where London's Best Founders Launch, Grow, and Stay">
+  <meta property="og:description" content="Startup hub in Holborn, London. 700+ members, $500M+ raised collectively.">
+  <meta property="og:type" content="website">
+  <style>
+    @font-face {
+      font-family: 'Perandory';
+      src: url('tower-2-confidential/assets/PERANDORY/Perandory-Semi-Condensed.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --red: #e61d2b;
+      --red-dark: #ca0024;
+      --cream: #FFEAC3;
+      --dark: #141414;
+      --font: 'Unbounded', sans-serif;
+      --font-display: 'Perandory', Georgia, serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { font-size: 16px; }
+
+    body {
+      font-family: var(--font);
+      color: #fff;
+      background: var(--dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .stars-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .star {
+      position: absolute;
+      fill: var(--red);
+      opacity: 0.07;
+    }
+
+    .star-1 { width: 320px; top: -60px; left: -80px; opacity: 0.09; }
+    .star-2 { width: 200px; bottom: -40px; right: -50px; opacity: 0.06; }
+    .star-3 { width: 140px; top: 30%; right: 10%; opacity: 0.04; }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      max-width: 640px;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #fff;
+      margin-bottom: 1.5rem;
+    }
+
+    .tagline {
+      font-size: clamp(0.9rem, 2.5vw, 1.15rem);
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+
+    .location {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.35);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--font);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      border-radius: 60px;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .cta:hover {
+      background: var(--red-dark);
+      transform: scale(1.03);
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 2rem;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.2);
+      letter-spacing: 0.1em;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars-bg">
+    <svg class="star star-1" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
+    <svg class="star star-2" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
+    <svg class="star star-3" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
+  </div>
+
+  <div class="container">
+    <h1 class="logo">Tower</h1>
+    <p class="tagline">Where outlier founders launch, grow, and stay</p>
+    <p class="location">Startup hub &middot; Holborn, London</p>
+    <a href="mailto:hello@tower.community" class="cta">Get in touch</a>
+  </div>
+
+  <div class="footer">tower.community</div>
+
+</body>
+</html>
