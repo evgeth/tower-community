@@ -1,156 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tower – Where London's Best Founders Launch, Grow, and Stay</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23e61d2b' width='32' height='32' rx='4'/><text x='16' y='24' text-anchor='middle' font-size='22' font-weight='bold' fill='white' font-family='serif'>T</text></svg>">
-  <meta name="description" content="Tower is a startup hub in Holborn, London. 700+ members, $500M+ raised collectively. Where outlier founders launch, grow, and stay.">
-  <meta property="og:title" content="Tower – Where London's Best Founders Launch, Grow, and Stay">
-  <meta property="og:description" content="Startup hub in Holborn, London. 700+ members, $500M+ raised collectively.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171515">
+  <meta name="description" content="Tower is a London community built by founders, for founders. Meet the people, conversations and events moving ambitious companies forward.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://tower.community/">
   <meta property="og:type" content="website">
-  <style>
-    @font-face {
-      font-family: 'Perandory';
-      src: url('tower-2-confidential/assets/PERANDORY/Perandory-Semi-Condensed.otf') format('opentype');
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
-
-    :root {
-      --red: #e61d2b;
-      --red-dark: #ca0024;
-      --cream: #FFEAC3;
-      --dark: #141414;
-      --font: 'Unbounded', sans-serif;
-      --font-display: 'Perandory', Georgia, serif;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { font-size: 16px; }
-
-    body {
-      font-family: var(--font);
-      color: #fff;
-      background: var(--dark);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    .stars-bg {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .star {
-      position: absolute;
-      fill: var(--red);
-      opacity: 0.07;
-    }
-
-    .star-1 { width: 320px; top: -60px; left: -80px; opacity: 0.09; }
-    .star-2 { width: 200px; bottom: -40px; right: -50px; opacity: 0.06; }
-    .star-3 { width: 140px; top: 30%; right: 10%; opacity: 0.04; }
-
-    .container {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 2rem;
-      max-width: 640px;
-      animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .logo {
-      font-family: var(--font-display);
-      font-size: clamp(4rem, 12vw, 8rem);
-      font-weight: 400;
-      letter-spacing: 0.02em;
-      color: #fff;
-      margin-bottom: 1.5rem;
-    }
-
-    .tagline {
-      font-size: clamp(0.9rem, 2.5vw, 1.15rem);
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.6);
-      line-height: 1.7;
-      margin-bottom: 0.5rem;
-    }
-
-    .location {
-      font-size: 0.8rem;
-      font-weight: 400;
-      color: rgba(255, 255, 255, 0.35);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-bottom: 3rem;
-    }
-
-    .cta {
-      display: inline-block;
-      padding: 1rem 2.5rem;
-      background: var(--red);
-      color: #fff;
-      text-decoration: none;
-      font-family: var(--font);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      border-radius: 60px;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .cta:hover {
-      background: var(--red-dark);
-      transform: scale(1.03);
-    }
-
-    .footer {
-      position: fixed;
-      bottom: 2rem;
-      font-size: 0.7rem;
-      color: rgba(255, 255, 255, 0.2);
-      letter-spacing: 0.1em;
-      z-index: 1;
-    }
-  </style>
+  <meta property="og:site_name" content="Tower Community">
+  <meta property="og:title" content="Tower Community — Built by founders, for founders">
+  <meta property="og:description" content="Find your people. A community for founders in London’s King’s Cross.">
+  <meta property="og:url" content="https://tower.community/">
+  <meta property="og:image" content="https://tower.community/assets/meetups.jpg">
+  <meta property="og:image:alt" content="Tower Community members at a rooftop meetup">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Tower Community — Built by founders, for founders</title>
+  <link rel="stylesheet" href="styles.css?v=20260925-56">
 </head>
-<body>
+<body><svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><filter id="white-logo" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/></filter><filter id="white-cutout" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -.333 -.333 -.333 0 1"/><feComponentTransfer><feFuncA type="linear" slope="4"/></feComponentTransfer><feComposite in2="SourceGraphic" operator="in"/></filter><filter id="zerion-white" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -.333 -.333 -.333 0 1"/><feComposite in2="SourceGraphic" operator="in"/><feComponentTransfer><feFuncA type="linear" slope="3"/></feComponentTransfer></filter></defs></svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Tower Community home"><img width="3296" height="1022" decoding="async" src="assets/tower-logo.png" alt="Tower"></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#founders">Founders</a><a href="#members">Members</a><a href="#inside">Inside Tower</a><a href="#events">Events</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="https://t.me/towercommunity_bot" target="_blank" rel="noopener noreferrer">Apply to join <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+  <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile navigation" hidden>
+    <a href="#founders">Founders</a><a href="#members">Members</a><a href="#inside">Inside Tower</a><a href="#events">Events</a><a href="https://t.me/towercommunity_bot" target="_blank" rel="noopener noreferrer">Apply to join</a><a href="#contact">Contact</a>
+  </nav>
+  <main id="main">
+    <section class="hero frame" aria-labelledby="hero-title">
+      <div class="hero-mark"><img width="3296" height="1022" decoding="async" src="assets/tower-logo.png" alt="Tower"></div>
+      <div class="hero-copy"><div><h1 id="hero-title">Where outlier founders launch, grow, and stay</h1><p class="hero-location">London, King’s Cross</p></div><a class="button button-light" href="https://t.me/towercommunity_bot" target="_blank" rel="noopener noreferrer">Apply to join <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="stats wrap" aria-label="Tower in numbers"><div><strong>800+</strong><span>community members</span></div><div><strong>$500M+</strong><span>raised collectively by founders</span></div><div><strong>46%</strong><span>Global Talent Visa holders</span></div></section>
 
-  <div class="stars-bg">
-    <svg class="star star-1" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
-    <svg class="star star-2" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
-    <svg class="star star-3" viewBox="0 0 126 126" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M63 126C62.874 91.249 34.717 63.117 0 63.117C34.794 63.117 63 34.858 63 0C63.125 34.751 91.284 62.883 126 62.883C91.206 62.883 63 91.142 63 126Z" fill="currentColor"/></svg>
-  </div>
+    <section class="section wrap" id="founders" aria-labelledby="founders-title"><div class="section-heading"><h2 id="founders-title">Founded by <strong>founders.</strong></h2><p>Tower began with people who believe the right room can change what a founder builds next.</p></div><div class="founder-grid"><article class="founder-card"><img width="1254" height="1254" decoding="async" src="assets/greg-gray.webp" alt="Greg Tkachenko" loading="lazy"><div><h3>Greg Tkachenko</h3><p>Co-founder, Tower · Co-founder & CEO, Unreal Labs</p><a class="profile-link" href="https://www.linkedin.com/in/grtkachenko/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><svg class="normalized-logo company-mark" role="img" aria-label="Unreal Labs" preserveAspectRatio="xMinYMid meet" viewBox="55 39 94 102" xmlns="http://www.w3.org/2000/svg"><title>Unreal Labs</title><image href="assets/logos/unreal_labs.png" width="200" height="200" filter="url(#white-logo)"/></svg></div></article><article class="founder-card"><div class="founder-photo-crop"><img width="1170" height="1344" decoding="async" src="assets/evgeny-gray.webp" alt="Evgeny Yurtaev" loading="lazy"></div><div><h3>Evgeny Yurtaev</h3><p>Co-founder, Tower · Co-founder & CEO, Zerion</p><a class="profile-link" href="https://www.linkedin.com/in/yurtaev/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><svg class="normalized-logo company-mark" role="img" aria-label="Zerion" viewBox="33 618 3775 925" xmlns="http://www.w3.org/2000/svg"><title>Zerion</title><image href="assets/logos/zerion.png" width="3840" height="2160" filter="url(#white-cutout)"/></svg></div></article></div></section>
 
-  <div class="container">
-    <h1 class="logo">Tower</h1>
-    <p class="tagline">Where outlier founders launch, grow, and stay</p>
-    <p class="location">Startup hub &middot; Holborn, London</p>
-    <a href="mailto:hello@tower.community" class="cta">Get in touch</a>
-  </div>
+    <section class="section wrap" id="members" aria-labelledby="members-title"><div class="section-heading"><h2 id="members-title">Residents</h2><p>Meet founders building across software, AI, fintech and more.</p></div><div class="carousel-toolbar"><div><button class="carousel-prev" aria-label="Previous residents" aria-controls="resident-track">←</button><button class="carousel-next" aria-label="Next residents" aria-controls="resident-track">→</button></div></div><div class="member-grid" id="resident-track" role="list" tabindex="0" aria-label="Tower residents"><article class="member-card" role="listitem"><div class="resident-top"><div class="resident-photo-crop"><img width="461" height="512" decoding="async" class="resident-photo" src="assets/ilia.png" alt="Ilia Drozdov" loading="lazy"></div><svg class="normalized-logo company-mark" role="img" aria-label="Dwelly" viewBox="0 75 200 48" xmlns="http://www.w3.org/2000/svg"><title>Dwelly</title><image href="assets/logos/dwelly.png" width="200" height="200" filter="url(#white-logo)"/></svg></div><div class="resident-info"><h3>Ilia Drozdov</h3><p>Co-founder & CEO, Dwelly</p></div><div class="backing"><span>Backed by</span><div class="backer-logos"><svg class="normalized-logo " role="img" aria-label="General Catalyst" viewBox="0 0 2351 826" xmlns="http://www.w3.org/2000/svg"><title>General Catalyst</title><image href="assets/logos/general_catalyst.png" width="2351" height="826" filter="url(#white-logo)"/></svg><img width="382" height="28" decoding="async" src="assets/logos/trinity_capital.svg" alt="Trinity Capital" loading="lazy"><img width="714" height="205" decoding="async" src="assets/logos/begin_capital.svg" alt="Begin Capital" loading="lazy"><img width="420" height="120" decoding="async" src="assets/logos/s16vc.svg" alt="s16vc" loading="lazy"></div></div></article><article class="member-card" role="listitem"><div class="resident-top"><div class="resident-photo-crop"><img width="358" height="435" decoding="async" class="resident-photo" src="assets/dan.png" alt="Dan Lifshits" loading="lazy"></div><svg class="normalized-logo company-mark" role="img" aria-label="Dwelly" viewBox="0 75 200 48" xmlns="http://www.w3.org/2000/svg"><title>Dwelly</title><image href="assets/logos/dwelly.png" width="200" height="200" filter="url(#white-logo)"/></svg></div><div class="resident-info"><h3>Dan Lifshits</h3><p>Co-founder & CPO, Dwelly</p></div><div class="backing"><span>Backed by</span><div class="backer-logos"><svg class="normalized-logo " role="img" aria-label="General Catalyst" viewBox="0 0 2351 826" xmlns="http://www.w3.org/2000/svg"><title>General Catalyst</title><image href="assets/logos/general_catalyst.png" width="2351" height="826" filter="url(#white-logo)"/></svg><img width="382" height="28" decoding="async" src="assets/logos/trinity_capital.svg" alt="Trinity Capital" loading="lazy"><img width="714" height="205" decoding="async" src="assets/logos/begin_capital.svg" alt="Begin Capital" loading="lazy"><img width="420" height="120" decoding="async" src="assets/logos/s16vc.svg" alt="s16vc" loading="lazy"></div></div></article><article class="member-card" role="listitem"><div class="resident-top"><div class="resident-photo-crop"><img width="430" height="435" decoding="async" class="resident-photo" src="assets/andrey.png" alt="Andrey Breslav" loading="lazy"></div><svg class="normalized-logo company-mark" role="img" aria-label="CodeSpeak" viewBox="1 1 154 65" xmlns="http://www.w3.org/2000/svg"><title>CodeSpeak</title><image href="assets/logos/codespeak.avif" width="156" height="66" filter="url(#white-logo)"/></svg></div><div class="resident-info"><h3>Andrey Breslav</h3><p>Founder, CodeSpeak · Creator of Kotlin</p></div><div class="backing"><span>Backed by</span><div class="backer-logos"><svg class="normalized-logo " role="img" aria-label="Accel" viewBox="0 0 960 302" xmlns="http://www.w3.org/2000/svg"><title>Accel</title><image href="assets/logos/accel.png" width="960" height="308" filter="url(#white-logo)"/></svg><img width="420" height="120" decoding="async" src="assets/logos/s16vc.svg" alt="s16vc" loading="lazy"><svg class="normalized-logo " role="img" aria-label="Zeroprime" viewBox="10 10 820 126" xmlns="http://www.w3.org/2000/svg"><title>Zeroprime</title><image href="assets/logos/zeroprime.png" width="840" height="146" filter="url(#white-logo)"/></svg></div></div></article><article class="member-card" role="listitem"><div class="resident-top"><div class="resident-photo-crop"><img width="328" height="435" decoding="async" class="resident-photo" src="assets/alex.png" alt="Alex Tkachenko" loading="lazy"></div><img width="500" height="500" decoding="async" class="company-mark" src="assets/logos/fira-white.svg" alt="Fira"></div><div class="resident-info"><h3>Alex Tkachenko</h3><p>Co-founder & CEO, Fira</p></div><div class="backing"><span>Backed by</span><div class="backer-logos"><svg class="normalized-logo " role="img" aria-label="Y Combinator" viewBox="0 0 1098 200" xmlns="http://www.w3.org/2000/svg"><title>Y Combinator</title><image href="assets/logos/ycombinator.png" width="1100" height="200" filter="url(#white-cutout)"/></svg><svg class="normalized-logo " role="img" aria-label="Cyber.Fund" viewBox="42 16 616 117" xmlns="http://www.w3.org/2000/svg"><title>Cyber.Fund</title><image href="assets/logos/cyber_fund.png" width="678" height="134" filter="url(#white-logo)"/></svg></div></div></article><article class="member-card" role="listitem"><div class="resident-top"><div class="resident-photo-crop"><img width="389" height="461" decoding="async" class="resident-photo" src="assets/daniel.png" alt="Daniel Dhawan" loading="lazy"></div><svg class="normalized-logo company-mark" role="img" aria-label="Rork" viewBox="0 224 1581 382" xmlns="http://www.w3.org/2000/svg"><title>Rork</title><image href="assets/logos/rork.png" width="1581" height="830" filter="url(#white-logo)"/></svg></div><div class="resident-info"><h3>Daniel Dhawan</h3><p>Co-founder & CEO, Rork</p></div><div class="backing"><span>Backed by</span><div class="backer-logos"><svg class="normalized-logo " role="img" aria-label="a16z Speedrun" viewBox="0 0 600 83" xmlns="http://www.w3.org/2000/svg"><title>a16z Speedrun</title><image href="assets/logos/a16z_speedrun.png" width="600" height="83" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Left Lane" viewBox="10 10 1620 1059" xmlns="http://www.w3.org/2000/svg"><title>Left Lane</title><image href="assets/logos/left_lane.png" width="1640" height="1079" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Peak XV" viewBox="0 0 390 146" xmlns="http://www.w3.org/2000/svg"><title>Peak XV</title><image href="assets/logos/peak_xv.png" width="400" height="165" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="True Ventures" viewBox="0 0 1170 140" xmlns="http://www.w3.org/2000/svg"><title>True Ventures</title><image href="assets/logos/true_ventures.png" width="1170" height="150" filter="url(#white-logo)"/></svg></div></div></article><article class="member-card" role="listitem"><div class="resident-top"><div class="resident-photo-crop"><img width="389" height="512" decoding="async" class="resident-photo" src="assets/bahram.png" alt="Bahram Ismailau" loading="lazy"></div><svg class="normalized-logo company-mark" role="img" aria-label="Yope" viewBox="0 0 352 127" xmlns="http://www.w3.org/2000/svg"><title>Yope</title><image href="assets/logos/yope.png" width="352" height="128" filter="url(#white-logo)"/></svg></div><div class="resident-info"><h3>Bahram Ismailau</h3><p>Founder & CEO, Yope</p></div><div class="backing"><span>Backed by</span><div class="backer-logos"><img width="519" height="83" decoding="async" src="assets/logos/goodwater.svg" alt="Goodwater" loading="lazy"><svg class="normalized-logo " role="img" aria-label="Kima Ventures" viewBox="0 0 1200 668" xmlns="http://www.w3.org/2000/svg"><title>Kima Ventures</title><image href="assets/logos/kima_ventures.png" width="1200" height="668" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Speedinvest" viewBox="0 0 917 208" xmlns="http://www.w3.org/2000/svg"><title>Speedinvest</title><image href="assets/logos/speedinvest.png" width="917" height="208" filter="url(#white-cutout)"/></svg></div></div></article><article class="member-card more-members" role="listitem"><img width="204" height="204" decoding="async" class="tower-symbol community-star" src="assets/symbols/star.svg" alt="" aria-hidden="true"><span>And</span><strong>800+</strong><h3>more members</h3><p>Find your people in Tower.</p><a class="profile-link" href="#join">Join the community ↗</a></article></div><div class="logo-groups"><div><h3>Our founders are from</h3><div class="logo-grid"><svg class="normalized-logo " role="img" aria-label="Meta" viewBox="0 0 960 194" xmlns="http://www.w3.org/2000/svg"><title>Meta</title><image href="assets/logos/meta-logo.png" width="960" height="194" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Snapchat" viewBox="1 1 244 244" xmlns="http://www.w3.org/2000/svg"><title>Snapchat</title><image href="assets/logos/logo-8.png" width="246" height="246" filter="url(#white-cutout)"/></svg><svg class="normalized-logo " role="img" aria-label="Amazon" viewBox="0 1 574 173" xmlns="http://www.w3.org/2000/svg"><title>Amazon</title><image href="assets/logos/logo-9.png" width="575" height="175" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Google" viewBox="0 0 1190 392" xmlns="http://www.w3.org/2000/svg"><title>Google</title><image href="assets/logos/logo-6.png" width="1191" height="392" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Revolut" viewBox="0 0 2308 520" xmlns="http://www.w3.org/2000/svg"><title>Revolut</title><image href="assets/logos/logo-10.png" width="2308" height="520" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Wise" viewBox="0 0 500 114" xmlns="http://www.w3.org/2000/svg"><title>Wise</title><image href="assets/logos/logo-11.png" width="500" height="114" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Spotify" viewBox="0 0 2558 768" xmlns="http://www.w3.org/2000/svg"><title>Spotify</title><image href="assets/logos/logo-12.png" width="2558" height="768" filter="url(#white-logo)"/></svg><img width="927" height="322" decoding="async" src="assets/logos/uber-logo.svg" alt="Uber"></div></div><div><h3>Our startups are backed by</h3><div class="logo-grid logo-grid-investors"><svg class="normalized-logo " role="img" aria-label="Sequoia" viewBox="0 0 1024 135" xmlns="http://www.w3.org/2000/svg"><title>Sequoia</title><image href="assets/logos/logo-1.png" width="1024" height="135" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="General Catalyst" viewBox="0 0 2351 826" xmlns="http://www.w3.org/2000/svg"><title>General Catalyst</title><image href="assets/logos/logo-2.png" width="2351" height="826" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Andreessen Horowitz" viewBox="0 0 3772 1011" xmlns="http://www.w3.org/2000/svg"><title>Andreessen Horowitz</title><image href="assets/logos/logo-3.png" width="3772" height="1011" filter="url(#white-logo)"/></svg><svg class="normalized-logo " role="img" aria-label="Y Combinator" viewBox="0 0 2886 597" xmlns="http://www.w3.org/2000/svg"><title>Y Combinator</title><image href="assets/logos/logo-4.png" width="2886" height="597" filter="url(#white-cutout)"/></svg><svg class="normalized-logo " role="img" aria-label="Accel" viewBox="0 0 309 97" xmlns="http://www.w3.org/2000/svg"><title>Accel</title><image href="assets/logos/logo-5.png" width="309" height="97" filter="url(#white-logo)"/></svg></div></div></div></section>
 
-  <div class="footer">tower.community</div>
+    <section class="section wrap" id="who" aria-labelledby="who-title"><div class="section-heading"><h2 id="who-title">Who is Tower for?</h2><p>For people building, scaling and backing ambitious companies.</p></div><div class="audience-grid"><article><h3>Early-stage founders</h3><p>Find peers, test ideas and build your first team.</p></article><article><h3>Established founders</h3><p>Share the decisions behind scaling, funding and your next chapter.</p></article><article><h3>Big tech operators</h3><p>Meet founders and bring your experience to the startup community.</p></article><article><h3>Investors</h3><p>Get to know the people building the next generation of companies.</p></article></div></section>
 
+    <section class="section wrap" id="inside" aria-labelledby="inside-title"><div class="section-heading"><h2 id="inside-title">What’s <strong>inside Tower.</strong></h2></div><div class="benefits"><article class="telegram-feature"><div class="telegram-copy"><h3>Private conversations.<br>A community behind you.</h3><div class="telegram-feature-grid"><div class="subchat-board"><h4>Subchats</h4><div class="subchat-tiles"><div class="subchat-tile"><span class="topic-icon topic-events" aria-hidden="true">E</span><div><strong>Events</strong><span>What’s coming up</span></div></div><div class="subchat-tile"><span class="topic-icon topic-jobs" aria-hidden="true">J</span><div><strong>Jobs & hiring</strong><span>Find your next match</span></div></div><div class="subchat-tile"><span class="topic-icon topic-intro" aria-hidden="true">I</span><div><strong>Intro requests</strong><span>Meet the right people</span></div></div><div class="subchat-tile"><span class="topic-icon topic-fundraising" aria-hidden="true">F</span><div><strong>Fundraising</strong><span>Share advice & connections</span></div></div><div class="subchat-tile"><span class="topic-icon topic-ai" aria-hidden="true">AI</span><div><strong>AI news</strong><span>Discuss what’s new</span></div></div><div class="subchat-tile"><span class="topic-icon topic-general" aria-hidden="true">#</span><div><strong>General</strong><span>Share what you’re building</span></div></div></div></div><div class="telegram-extra coffee-extra"><img width="155" height="155" decoding="async" class="tower-symbol telegram-brand-symbol" src="assets/symbols/clock-red.svg" alt="" aria-hidden="true"><strong>Random Coffee</strong></div><div class="telegram-extra members-extra"><img width="204" height="204" decoding="async" class="tower-symbol telegram-brand-symbol" src="assets/symbols/star-red.svg" alt="" aria-hidden="true"><strong>Tower members</strong><span>Explore the members list</span></div></div></div><div class="telegram-visual"><div class="iphone-frame"><div class="iphone-screen"><div class="iphone-status" aria-hidden="true"><span>9:41</span><span class="dynamic-island"></span><span>▰</span></div><div class="telegram-phone-header"><span aria-hidden="true">‹</span><div><strong>Tower Friends</strong><span>General</span></div><div class="phone-avatar"><img width="3296" height="1022" decoding="async" src="assets/tower-logo.png" alt=""></div></div><div class="telegram-pinned"><strong>Pinned message</strong><span>Welcome to Tower 👋</span></div><div class="telegram-message-viewport welcome-chat"><div class="welcome-bubble"><strong>Greg Tkachenko</strong><p>👋 Hi and welcome to Tower!</p><p>Hi, I’m Greg, co-founder of Tower. We’re building a community where founders, Big Tech alumni and investors can share, learn and support each other — in London and beyond.</p><p>📍 Our startup house in King’s Cross, London is a place to cowork and meet in person.</p><p>💬 Here in the chat, introduce yourself with #intro, explore the subchats and check the pinned message to get started.</p><p>Glad to have you here!</p></div></div><div class="telegram-compose" aria-hidden="true"><span>＋</span><div>Message <span>☺</span></div><svg width="18" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></svg></div><div class="iphone-home" aria-hidden="true"></div></div></div></div></article><article><img width="1280" height="851" decoding="async" class="benefit-art events-feature-photo" src="assets/events-panel.jpg" alt="Founders and audience at Tower’s Grow Your Startup on Social Media panel" loading="lazy"><div><h3 class="symbol-heading"><img width="267" height="174" decoding="async" class="tower-symbol feature-symbol" src="assets/symbols/ticket.svg" alt="" aria-hidden="true">Events</h3><p>Public talks, Demo Days, meetups and time together beyond the pitch.</p></div></article><article><img width="2500" height="1663" decoding="async" class="benefit-art building-photo" src="assets/kings-cross-building.jpg" alt="Tower’s building in King’s Cross, London, with a red double-decker bus passing outside" loading="lazy"><div><h3 class="symbol-heading"><img width="153" height="203" decoding="async" class="tower-symbol feature-symbol" src="assets/symbols/pin.svg" alt="" aria-hidden="true">Coworking space</h3><p>Our own building in King’s Cross, London — a home to cowork, meet other founders and keep the conversation going.</p></div></article></div></section>
+
+    <section class="section wrap speakers" id="speakers" aria-labelledby="speakers-title"><div class="section-heading"><h2 id="speakers-title">Our partners.</h2></div><div class="speaker-brands"><div class="speaker-brand"><img width="141" height="32" decoding="async" class="speaker-wordmark youtube-wordmark" src="assets/speakers/youtube-wordmark.svg" alt="YouTube" loading="lazy"></div><div class="speaker-brand"><img width="86" height="24" decoding="async" class="speaker-wordmark openai-wordmark" src="assets/speakers/openai-wordmark.svg" alt="OpenAI" loading="lazy"></div><div class="speaker-brand"><img width="773" height="122" decoding="async" class="speaker-wordmark alibaba-wordmark" src="assets/speakers/alibaba-wordmark.svg" alt="Alibaba" loading="lazy"></div><div class="speaker-brand"><img width="876" height="320" decoding="async" class="speaker-wordmark miro-wordmark" src="assets/speakers/miro-wordmark.svg?v=2" alt="Miro" loading="lazy"></div></div></section>
+
+    <section class="section wrap" id="events" aria-labelledby="events-title"><div class="section-heading"><h2 id="events-title">Come together <strong>in real life.</strong></h2><p>Talks, working sessions and evenings that turn introductions into relationships.</p></div><div class="event-gallery event-mosaic"><figure class="mosaic-tile wide"><img width="1200" height="800" decoding="async" src="assets/meetups.jpg" alt="Tower rooftop meetup" loading="lazy"><figcaption>Meetups</figcaption></figure><figure class="mosaic-tile "><img width="1280" height="852" decoding="async" src="assets/founder-talks.jpg" alt="Founder speaking at a Tower public talk" loading="lazy"><figcaption>Public Talks</figcaption></figure><figure class="mosaic-tile"><img width="1200" height="800" decoding="async" src="assets/rooftop-friends.jpg" alt="Tower community members together on a rooftop terrace" loading="lazy"></figure><figure class="mosaic-tile "><img width="1280" height="851" decoding="async" src="assets/social.jpg" alt="Tower community party" loading="lazy"><figcaption>Parties</figcaption></figure><figure class="mosaic-tile tall"><img width="720" height="1280" decoding="async" src="assets/outdoor-activities.jpg" alt="Tower members hiking with the Tower flag" loading="lazy"><figcaption>Outdoor Activities</figcaption></figure><figure class="mosaic-tile "><img width="1280" height="851" decoding="async" src="assets/meetup-discussion.jpg" alt="Founders sharing ideas at Tower" loading="lazy"></figure><figure class="mosaic-tile wide"><img width="1280" height="851" decoding="async" src="assets/events-panel.jpg" alt="Tower panel discussion with founders" loading="lazy"></figure><figure class="mosaic-tile"><img width="1536" height="1024" decoding="async" src="assets/founder-interview-edited.webp" alt="Founder interview with the Tower community" loading="lazy"><figcaption>Founder Interviews</figcaption></figure><figure class="mosaic-tile "><img width="960" height="1280" decoding="async" src="assets/demo-days.jpg" alt="Founder presenting to the audience at a Tower Demo Day" loading="lazy" style="object-position:50% 65%"><figcaption>Demo Days</figcaption></figure></div><div class="calendar-head"><p>Follow our Luma calendar for more events</p><a class="button button-light" href="https://luma.com/tower?k=c" target="_blank" rel="noopener noreferrer">Follow on Luma <span aria-hidden="true">↗</span></a></div></section>
+
+    <section class="section wrap" id="join" aria-labelledby="join-title"><div class="join-panel"><div class="join-symbol" aria-hidden="true"><img width="199" height="440" decoding="async" src="assets/tower-t.svg" alt=""></div><div class="join-content"><div><h2 id="join-title"><span class="quiet">Find your people.</span><br><strong>Join Tower.</strong></h2><p>Join a community that opens doors to people, conversations and opportunities.</p></div><a class="button button-light" href="https://t.me/towercommunity_bot" target="_blank" rel="noopener noreferrer">Apply to join <span aria-hidden="true">↗</span></a><p class="application-note">Applications are handled through our Telegram bot.<br>If you can’t use Telegram, email us at <a href="mailto:thetowercommunity@gmail.com?subject=Tower%20Community%20application">thetowercommunity@gmail.com</a>.</p></div></div></section>
+
+    <section class="section wrap faq" aria-labelledby="faq-title"><div class="section-heading"><h2 id="faq-title">Frequently asked questions.</h2></div><div class="faq-list"><details><summary>Who is Tower for?</summary><p>Tower is a community for startup founders and people building ambitious companies in London.</p></details><details><summary>What happens inside the community?</summary><p>Members can connect in the private Telegram chat and subchats, meet through random coffee, join community events and spend time together at the King’s Cross space.</p></details><details><summary>Where can I see upcoming events?</summary><p>Follow the Tower calendar for event announcements and registration. You can <a href="https://luma.com/tower?k=c" target="_blank" rel="noopener noreferrer">open it on Luma</a>.</p></details></div></section>
+
+    <section class="section wrap contact" id="contact" aria-labelledby="contact-title"><div class="contact-panel"><div class="contact-portrait"><img width="640" height="640" decoding="async" src="assets/anna.jpg" alt="Anna, Tower community lead" loading="lazy"></div><div><h2 id="contact-title">Still have questions?</h2><p>Talk to Anna about the community.<br><a class="email-address" href="mailto:thetowercommunity@gmail.com">thetowercommunity@gmail.com</a></p></div></div></section>
+  </main>
+  <footer class="footer wrap"><div><img width="3296" height="1022" decoding="async" src="assets/tower-logo.png" alt="Tower"><p>Built by founders, for founders.</p></div><div class="footer-socials"><span>Follow us</span><nav aria-label="Tower social media"><a href="https://luma.com/tower?k=c" target="_blank" rel="noopener noreferrer" aria-label="Tower on Luma" title="Tower on Luma"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 133 134" aria-hidden="true"><path fill="currentColor" d="M133 67C96.282 67 66.5 36.994 66.5 0c0 36.994-29.782 67-66.5 67 36.718 0 66.5 30.006 66.5 67 0-36.994 29.782-67 66.5-67"/></svg></a><a href="https://www.instagram.com/thetower_london?igsh=MW9kOTlyY2M5cDA2NA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Tower on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="https://www.linkedin.com/company/tower-community/" target="_blank" rel="noopener noreferrer" aria-label="Tower on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 2H3.55C2.69 2 2 2.68 2 3.52v16.96c0 .84.69 1.52 1.55 1.52h16.9c.86 0 1.55-.68 1.55-1.52V3.52c0-.84-.69-1.52-1.55-1.52ZM7.93 18.75H4.98V9.2h2.95v9.55ZM6.45 7.9a1.71 1.71 0 1 1 0-3.42 1.71 1.71 0 0 1 0 3.42Zm12.3 10.85H15.8V14.1c0-1.1-.02-2.52-1.54-2.52-1.54 0-1.78 1.2-1.78 2.44v4.73H9.53V9.2h2.83v1.3h.04c.4-.75 1.36-1.54 2.79-1.54 2.98 0 3.56 1.96 3.56 4.5v5.29Z"/></svg></a></nav></div></footer>
+  <script src="script.js?v=20260925-56"></script>
 </body>
 </html>
