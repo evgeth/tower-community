@@ -419,3 +419,4 @@ h1{font-weight:600}.section-heading h2,.contact h2{font-weight:550}.section-head
 img{height:auto}
 .hero-copy .hero-location{color:#fff;opacity:1}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}}
+.contact-messengers{display:flex;gap:14px;margin-top:14px}.contact-messengers a{display:inline-flex;color:var(--paper);opacity:.75;transition:opacity .2s}.contact-messengers a:hover{opacity:1}.contact-messengers svg{width:20px;height:20px;fill:currentColor;display:block}
