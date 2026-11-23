@@ -421,3 +421,25 @@ img{height:auto}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}}
 /* Email + messenger icons on one line. When the icons wrap on narrow screens, the negative margin and overflow clip remove their leading space so they align with the email. */
 .contact-line{display:block;overflow:hidden;margin:4px 0 -4px -4px;padding:4px 0 4px 4px}.contact-line-items{display:flex;flex-wrap:wrap;align-items:center;row-gap:10px;margin-left:-19px}.contact-line-item{position:relative;padding-left:19px;display:inline-flex;align-items:center}.contact-line .email-address{margin-top:0}.contact-messengers{gap:14px}.contact-messengers a{display:inline-flex;color:var(--paper);opacity:.8;transition:opacity .2s}.contact-messengers a:hover,.contact-messengers a:focus-visible{opacity:1}.contact-messengers svg{width:22px;height:22px;fill:currentColor;display:block}@media(max-width:480px){.contact-line-items{margin-left:-15px}.contact-line-item{padding-left:15px}.contact-messengers{gap:11px}.contact-messengers svg{width:20px;height:20px}}
+
+/* Founders: three portrait cards in one row on tablet and desktop. */
+@media(min-width:761px){
+ #founders .founder-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+ #founders .founder-card{display:flex;flex-direction:column;gap:20px;padding:16px 16px 22px;min-height:0}
+ #founders .founder-card>img,#founders .founder-card>.founder-photo-crop{width:100%;height:auto;aspect-ratio:1/1;border-radius:6px}
+ #founders .founder-card>.founder-photo-crop{position:relative}
+ #founders .founder-photo-crop img{position:absolute;inset:0 0 auto 0;width:100%;height:calc(100% + 9px)}
+ #founders .founder-card>img{object-fit:cover;object-position:center top}
+ #founders .founder-card>div:not(.founder-photo-crop){flex:1;justify-content:flex-start;padding:0 6px}
+ #founders .founder-card h3{font-size:21px}
+ #founders .founder-card p{margin-top:6px}
+ #founders .founder-card .profile-link{margin-top:6px;margin-bottom:10px}
+ #founders .founder-card .company-mark{margin-top:auto}
+}
+@media(min-width:761px) and (max-width:1000px){
+ #founders .founder-grid{gap:16px}
+ #founders .founder-card{padding:12px 12px 18px;gap:16px}
+ #founders .founder-card>div:not(.founder-photo-crop){padding:0 4px}
+ #founders .founder-card h3{font-size:18px}
+ #founders .founder-card p{font-size:13px}
+}
